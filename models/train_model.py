@@ -1,8 +1,9 @@
 import re
 import pickle
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 #rom sklearn.naive_bayes import MultinomialNB
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
 import pandas as pd
 import os
 
@@ -25,9 +26,13 @@ def preprocess_data(data):
 def train_model(csv_file):
     # Load dataset from CSV
     X_train, y_train = load_data_from_csv(csv_file)
+
+    #Splitting dataset into training and testing sets
+    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
+
     
     # Initialize vectorizer and transform data
-    vectorizer = CountVectorizer()
+    vectorizer = TfidfVectorizer()
     X_train_vectorized = vectorizer.fit_transform(X_train)
     
     # Initialize and train the classifier

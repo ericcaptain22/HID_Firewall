@@ -1,20 +1,43 @@
 # File: scripts/keystroke_interception.py
-
+from scripts.malicious_input_engine import load_trained_model, is_malicious_ml
 from pynput.keyboard import Key, Listener
 import os
 
+vectorizer, clf = load_trained_model()
 count = 0
 keys = []
+typed_command = []
 
 def on_press(key):
-    global keys, count
+    global keys, count, typed_command
     keys.append(str(key))          
     count += 1
     if count >= 10:  # Save to log file after 10 key presses
         count = 0
         write_file(keys)
         keys = []
+    try:
+        # Record alphanumeric keys
+        if hasattr(key, 'char') and key.char:
+            typed_command.append(key.char)
+        elif key == Key.space:
+            typed_command.append(' ')
+        elif key == Key.enter:
+            # Command is complete
+            command = ''.join(typed_command).strip()
+            print()
+            print(f"Detected command: {command}")
+            typed_command = []
 
+            # Analyze the command
+            if is_malicious_ml(command, vectorizer, clf):
+                print(f"Malicious command detected: {command}")
+            else:
+                print(f"Command is benign: {command}")
+    except Exception as e:
+        print(f"Error processing key: {e}")
+
+        
 def write_file(keys):
     # Ensure the log directory exists
     log_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
