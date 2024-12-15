@@ -63,7 +63,8 @@ command,label
 "echo 'alias rm=\"echo Do not remove\"' >> ~/.bashrc",1
 "chown root:root /etc/passwd",1
 "mv /etc/passwd /tmp",1
-
+"cp /etc/passwd /tmp",1
+"sudo -i",1
 
 "ls -la",0
 "cat /var/log/syslog",0
@@ -124,4 +125,8 @@ command,label
 "echo 'alias ll=\"ls -la\"' >> ~/.bashrc",0
 "git status",0
 "wget http://example.com/readme.txt -P ~/Downloads",0
-
+"sudo apt-get update",0
+"sudo apt-get upgrade",0
+"git push origin main",0
+"git add .",0
+"pip install -r requirements.txt",0

@@ -1,9 +1,10 @@
 # File: scripts/keystroke_interception.py
-from scripts.malicious_input_engine import load_trained_model, is_malicious_ml
+from scripts.malicious_input_engine import load_keystroke_model,load_payload_model, is_malicious_ml
 from pynput.keyboard import Key, Listener
 import os
 
-vectorizer, clf = load_trained_model()
+vectorizer, clf = load_keystroke_model()
+vectorizer, clf = load_payload_model()
 count = 0
 keys = []
 typed_command = []
@@ -67,3 +68,5 @@ def start_listener():
 
 if __name__ == "__main__":
     start_listener()
+
+

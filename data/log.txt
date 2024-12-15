@@ -1,0 +1,20 @@
+echo bad 
+rm i -rf /
+ps -aux
+mv /etc/passwd
+    mv /etc/passwd /tmp
+mv /etc/passwd /tmp
+mv /cat/passwd /tmp
+mv /etc/passwd /tmp
+zzzzsz.lallss  --llaa
+
+zzls -la
+df -j h
+man -ls
+nano .bashrc 
+rm -rf / s
+ls /root/
+updates.txt
+rm rf
+ls lnw ew model is added into the project
+ls

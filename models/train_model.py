@@ -1,52 +1,37 @@
-import re
-import pickle
+import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
-#rom sklearn.naive_bayes import MultinomialNB
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-import pandas as pd
+import pickle
 import os
 
+def load_data_from_csv(payload_file):
+    """Load data from payload.csv."""
+    df = pd.read_csv(payload_file)
+    return df['filepath']  # Return the file paths for training
 
-# Load the dataset from CSV
-def load_data_from_csv(csv_file):
-    try:
-        df = pd.read_csv(csv_file)
-        return df['command'], df['label']
-    except FileNotFoundError:
-        print(f"Error: The file {csv_file} was not found.")
-        exit(1)
+def train_model(payload_file):
+    # Load dataset
+    X = load_data_from_csv(payload_file)
 
- 
-def preprocess_data(data):
-    # Here we can add more preprocessing steps if needed
-    X, y = zip(*data)
-    return X, y
+    # Split dataset (labels are implicit for payloads)
+    X_train, X_test = train_test_split(X, test_size=0.2, random_state=42)
 
-def train_model(csv_file):
-    # Load dataset from CSV
-    X_train, y_train = load_data_from_csv(csv_file)
-
-    #Splitting dataset into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
-
-    
-    # Initialize vectorizer and transform data
-    vectorizer = TfidfVectorizer()
+    # Vectorize file paths
+    vectorizer = TfidfVectorizer(ngram_range=(1, 2))
     X_train_vectorized = vectorizer.fit_transform(X_train)
-    
-    # Initialize and train the classifier
-    clf = RandomForestClassifier(n_estimators=100, random_state=42)
-    clf.fit(X_train_vectorized, y_train)
 
-    # Ensure the models directory exists
+    # Train model
+    clf = RandomForestClassifier(n_estimators=100, random_state=42)
+    clf.fit(X_train_vectorized, [1] * len(X_train))  # Assume all payloads are malicious (label = 1)
+
+    # Save the trained model
     os.makedirs('models', exist_ok=True)
-    
-    # Save the trained model and vectorizer
-    with open('models/keystroke_model.pkl', 'wb') as model_file:
+    with open('models/payload_model.pkl', 'wb') as model_file:
         pickle.dump((vectorizer, clf), model_file)
-    print("Model trained and saved as 'models/keystroke_model.pkl'")
+    print("Model trained and saved as 'payload_model.pkl'")
 
 if __name__ == "__main__":
-    # Ensure the correct path to the CSV file
-    train_model('./data/keystrokes.csv')
+    train_model('./data/payload.csv')
+
+
