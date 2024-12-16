@@ -8,7 +8,8 @@ from scripts import enforcer
 from scripts import device_detection
 from scripts import keystroke_interception
 from scripts.encryption import encrypt_data, decrypt_data  # Import encryption functions
-from scripts.malicious_input_engine import analyze_keystroke, load_trained_model
+from scripts.malicious_input_engine import analyze_keystroke, load_keystroke_model, load_payload_model, is_malicious_ml
+from scripts.keystroke_interception import preprocess_command, keystroke_vectorizer, keystroke_clf
 
 # Malicious patterns
 MALICIOUS_PATTERNS = [
@@ -20,6 +21,26 @@ def is_malicious(keystroke):
         if pattern.search(keystroke):
             return True
     return False
+
+def analyze_keystroke(keystroke):
+    processed_keystroke = preprocess_command(keystroke)
+    if is_malicious_ml(processed_keystroke, keystroke_vectorizer, keystroke_clf):
+        print(f"Malicious command detected: {processed_keystroke}")
+        return True
+    return False
+
+def analyze_keystroke(keystroke):
+    """Analyze a command to check if it is malicious."""
+    processed_keystroke = preprocess_command(keystroke)  # Ensure proper preprocessing
+    print(f"Processed Command: {processed_keystroke}")   # Debug the preprocessed command
+
+    # Perform the analysis
+    if is_malicious_ml(processed_keystroke, keystroke_vectorizer, keystroke_clf):
+        print(f"Malicious command detected: {processed_keystroke}")
+        return True
+    else:
+        print(f"Command is benign: {processed_keystroke}")
+        return False
 
 def analyze_keystroke(keystroke):
     if is_malicious(keystroke):
@@ -45,9 +66,11 @@ class HIDFirewallApp:
             "button_fg": "#20232a"
         }
         
-        #Load trained model
-        self.vectorizer, self.clf = load_trained_model()
-      
+        #Load trained models
+        self.keystroke_vectorizer, self.keystroke_clf = load_keystroke_model()
+        self.payload_vectorizer, self.payload_clf = load_payload_model()    
+
+
         # USB Devices Frame
         self.usb_frame = tk.LabelFrame(self.root, text="Detected USB Devices", 
                                        font=self.style["font"], bg=self.style["highlight_bg"], fg=self.style["fg"])
@@ -121,7 +144,7 @@ class HIDFirewallApp:
             self.keystroke_list.insert(tk.END, 'Blocking input for 5 seconds...\n', 'highlight')
             enforcer.enforce_security("block_input", duration=5)  # Use the enforcer to block input
             enforcer.enforce_security("lock_system")
-            # enforcer.enforce_security("disconnect_device", device="Device Name")
+            enforcer.enforce_security("disconnect_device", device="Device Name")
 
     def on_release(self, key):
         if key == keyboard.Key.esc:
@@ -169,8 +192,6 @@ class HIDFirewallApp:
 
         ok_button = Button(alert, text="OK", command=alert.destroy, font=self.style["font"], bg=self.style["button_bg"], fg=self.style["button_fg"])
         ok_button.pack(pady=10)
-    
-
 
 
 if __name__ == "__main__":

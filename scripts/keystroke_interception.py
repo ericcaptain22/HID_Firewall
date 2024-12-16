@@ -3,7 +3,7 @@ from scripts.malicious_input_engine import load_keystroke_model,load_payload_mod
 from pynput.keyboard import Key, Listener
 import os
 
-vectorizer, clf = load_keystroke_model()
+keystroke_vectorizer, keystroke_clf = load_keystroke_model()
 vectorizer, clf = load_payload_model()
 count = 0
 keys = []
@@ -29,16 +29,20 @@ def on_press(key):
             print()
             print(f"Detected command: {command}")
             typed_command = []
-
+            
+            processed_command = preprocess_command(command)
             # Analyze the command
-            if is_malicious_ml(command, vectorizer, clf):
-                print(f"Malicious command detected: {command}")
+            if is_malicious_ml(processed_command, keystroke_vectorizer, keystroke_clf):
+                print(f"Malicious command detected: {processed_command}")
             else:
-                print(f"Command is benign: {command}")
+                print(f"Command is benign: {processed_command}")
     except Exception as e:
         print(f"Error processing key: {e}")
 
-        
+def preprocess_command(command):
+    """Ensure preprocessing is consistent."""
+    return command.strip().lower()
+
 def write_file(keys):
     # Ensure the log directory exists
     log_dir = os.path.join(os.path.dirname(__file__), '..', 'data')

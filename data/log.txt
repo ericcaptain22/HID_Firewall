@@ -17,4 +17,24 @@ ls /root/
 updates.txt
 rm rf
 ls lnw ew model is added into the project
-ls
+lspython3
+ls -la
+       , load
+keystrokespython3
+ls -la
+rm       ter
+zzzzzzzzzzzls -la
+rm -rf
+git adls -la
+gitls la
+rm -rf
+git addls -la
+
+from scripts.
+ impoer    rt pr
+, anal  ls -la
+
+ 
+v                        sls -la
+l                                     szls -la
+git

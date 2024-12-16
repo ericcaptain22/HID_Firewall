@@ -6,7 +6,6 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.ensemble import RandomForestClassifier
 from models.train_payload_model import read_file_content, preprocess_content
 
-
 # Malicious patterns for regex matching
 MALICIOUS_PATTERNS = [
     re.compile(r'echo\s+bad', re.IGNORECASE),

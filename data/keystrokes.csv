@@ -130,3 +130,5 @@ command,label
 "git push origin main",0
 "git add .",0
 "pip install -r requirements.txt",0
+"git fetch",0
+"ifconfig",0

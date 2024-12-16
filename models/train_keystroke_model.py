@@ -4,11 +4,12 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 import pickle
 import os
+from scripts.keystroke_interception import preprocess_command
 
 def train_keystroke_model(keystroke_file):
     # Load the dataset
     df = pd.read_csv(keystroke_file)
-
+    df['command'] = df['command'].apply(preprocess_command)
     # Ensure no NaN values
     df = df.dropna(subset=['command', 'label'])
     X, y = df['command'].astype(str), df['label']

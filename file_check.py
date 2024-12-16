@@ -14,3 +14,7 @@ base_dir = './data'
 # Check if the files exist
 df['exists'] = df['filepath'].apply(lambda x: os.path.exists(os.path.join(base_dir, x)))
 print(df[['filepath', 'exists']])
+
+
+df = pd.read_csv("data/keystrokes.csv")
+print(df['label'].value_counts())

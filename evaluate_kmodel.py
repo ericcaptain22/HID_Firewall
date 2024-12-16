@@ -4,11 +4,12 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 import pickle
+from scripts.keystroke_interception import preprocess_command
 
 def evaluate_keystroke_model(file_path):
     # Load dataset
     df = pd.read_csv(file_path)
-    X = df['command']
+    X = df['command'].apply(preprocess_command)
     y = df['label']
 
     # Split dataset
