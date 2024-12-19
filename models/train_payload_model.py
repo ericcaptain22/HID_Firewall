@@ -1,9 +1,14 @@
+import os
 import pandas as pd
+import numpy as np
+from tensorflow.keras.models import Sequential, load_model, Model
+from tensorflow.keras.layers import Input, Dense, LSTM, Dense, Embedding, Bidirectional
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 import pickle
-import os
 
 # Define the base directory of your project
 BASE_DIR = './data'  # Adjust to the actual base directory if needed
@@ -11,13 +16,41 @@ BASE_DIR = './data'  # Adjust to the actual base directory if needed
 def read_file_content(filepath):
     """Read the content of a file given its filepath."""
     try:
-        # Resolve relative paths to absolute paths
         full_path = os.path.join(BASE_DIR, filepath)
         with open(full_path, 'r', encoding='utf-8') as file:
             return file.read()
+    except UnicodeDecodeError:
+        print(f"Skipping binary file: {filepath}")
+        return None
     except Exception as e:
         print(f"Error reading file {filepath}: {e}")
         return None
+
+
+def analyze_payload_lstm(filepath, lstm_model, tokenizer):
+    """Analyze a file's content using the LSTM model."""
+    try:
+        content = read_file_content(filepath)
+        processed_content = preprocess_content(content)
+        sequence = tokenizer.texts_to_sequences([processed_content])
+        padded_sequence = pad_sequences(sequence, maxlen=100, padding='post', truncating='post')
+        prediction = lstm_model.predict(padded_sequence)
+        return prediction[0][0] > 0.5  # Threshold for malicious detection
+    except Exception as e:
+        print(f"Error analyzing file with LSTM: {e}")
+        return False
+
+def analyze_payload_rf(filepath, vectorizer, clf):
+    """Analyze a file's content using the Random Forest model."""
+    try:
+        content = read_file_content(filepath)
+        processed_content = preprocess_content(content)
+        X_test = vectorizer.transform([processed_content])
+        prediction = clf.predict(X_test)
+        return prediction[0] == 1
+    except Exception as e:
+        print(f"Error analyzing file with Random Forest: {e}")
+        return False
 
 def preprocess_content(content):
     """Preprocess the file content by removing unnecessary text (e.g., comments)."""
@@ -38,30 +71,71 @@ def load_payload_data(payload_file):
     df = df.dropna(subset=['content'])
     df = df[df['content'].str.strip() != ""]
 
-    X = df['content']
-    y = [1] * len(df)  # Assume all file contents are malicious
-    return X, y
+    return df
 
-def train_payload_model(payload_file):
-    # Load dataset
-    X, y = load_payload_data(payload_file)
+def prepare_lstm_data(df):
+    """Prepare data for LSTM training."""
+    tokenizer = Tokenizer(num_words=5000, oov_token='<OOV>')
+    tokenizer.fit_on_texts(df['content'])
 
-    # Split dataset
-    X_train, _, y_train, _ = train_test_split(X, y, test_size=0.2, random_state=42)
+    # Convert text to sequences and pad them
+    sequences = tokenizer.texts_to_sequences(df['content'])
+    padded_sequences = pad_sequences(sequences, maxlen=100, padding='post', truncating='post')
+    labels = [1] * len(padded_sequences)  # Label all payloads as malicious
+    return padded_sequences, labels, tokenizer
 
-    # Vectorize file contents
-    vectorizer = TfidfVectorizer(ngram_range=(1, 2))
-    X_train_vectorized = vectorizer.fit_transform(X_train)
+def train_lstm_model(X, y):
+    """Train LSTM model."""
+    # Define LSTM model
+    model = Sequential([
+        Embedding(input_dim=5000, output_dim=128),
+        Bidirectional(LSTM(64, return_sequences=False)),
+        Dense(1, activation='sigmoid')
+    ])
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
     # Train the model
-    clf = RandomForestClassifier(n_estimators=100, random_state=42)
-    clf.fit(X_train_vectorized, y_train)
+    model.fit(X, np.array(y), epochs=10, batch_size=32, validation_split=0.2)
+    return model
 
-    # Save the model
-    os.makedirs('models', exist_ok=True)
-    with open('models/payload_model.pkl', 'wb') as model_file:
-        pickle.dump((vectorizer, clf), model_file)
-    print("Payload model trained using file contents and saved as 'payload_model.pkl'")
+def prepare_rf_data(df):
+    """Prepare data for Random Forest training."""
+    vectorizer = TfidfVectorizer(ngram_range=(1, 2))
+    X = vectorizer.fit_transform(df['content'])
+    y = [1] * X.shape[0]  # Label all payloads as malicious
+    return X, y, vectorizer
+
+def train_rf_model(X, y):
+    """Train Random Forest model."""
+    clf = RandomForestClassifier(n_estimators=100, random_state=42)
+    clf.fit(X, y)
+    return clf
 
 if __name__ == "__main__":
-    train_payload_model('./data/payload.csv')
+    payload_file = './data/payload.csv'
+
+    # Load and preprocess the data
+    print("Loading and preprocessing data...")
+    df = load_payload_data(payload_file)
+
+    # Train LSTM Model
+    print("Training LSTM model...")
+    X_lstm, y_lstm, tokenizer = prepare_lstm_data(df)
+    lstm_model = train_lstm_model(X_lstm, y_lstm)
+
+    # Save the LSTM model and tokenizer
+    os.makedirs('models', exist_ok=True)
+    lstm_model.save('models/lstm_payload_model.keras')
+    with open('models/tokenizer.pkl', 'wb') as f:
+        pickle.dump(tokenizer, f)
+    print("LSTM model and tokenizer saved.")
+
+    # Train Random Forest Model
+    print("Training Random Forest model...")
+    X_rf, y_rf, vectorizer = prepare_rf_data(df)
+    rf_model = train_rf_model(X_rf, y_rf)
+
+    # Save the Random Forest model
+    with open('models/rf_payload_model.pkl', 'wb') as f:
+        pickle.dump((vectorizer, rf_model), f)
+    print("Random Forest model saved as 'rf_payload_model.pkl'.")

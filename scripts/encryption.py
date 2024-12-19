@@ -44,5 +44,5 @@ if __name__ == "__main__":
     plaintext = "Hello World"
     encrypted = encrypt_data(plaintext)
     print(f'Encrypted: {encrypted}')
-    decrypted = decrypt_data(encrypted)
-    print(f'Decrypted: {decrypted}')
+    #decrypted = decrypt_data(encrypted)
+    #print(f'Decrypted: {decrypted}')

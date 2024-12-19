@@ -37,4 +37,23 @@ from scripts.
  
 v                        sls -la
 l                                     szls -la
-git
+gitls -la
+git     gt  
+git add .
+clear
+exitls -la
+ifconfig
+         ps 
+-aux
+ps -aux
+ps -aux |g  grep cron
+ddff  --hhrm -rf
+ls -la
+chmod +z x
+   chmod +x chmod +x
+rm -r
+clls -la
+rm -r
+zc zls -
+xhmod +x
+wget

@@ -3,14 +3,18 @@ from tkinter import scrolledtext, Toplevel, Label, Button
 import threading
 from pynput import keyboard
 import re
+import pickle
 from scripts import sandbox_analysis
 from scripts import enforcer
 from scripts import device_detection
 from scripts import keystroke_interception
 from scripts.encryption import encrypt_data, decrypt_data  # Import encryption functions
-from scripts.malicious_input_engine import analyze_keystroke, load_keystroke_model, load_payload_model, is_malicious_ml
+#from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
+from models.train_payload_model import pad_sequences, read_file_content
+from scripts.malicious_input_engine import load_payload_model_rf
+from scripts.malicious_input_engine import analyze_keystroke, load_keystroke_model, analyze_keystroke, load_payload_model_lstm, preprocess_content
 from scripts.keystroke_interception import preprocess_command, keystroke_vectorizer, keystroke_clf
-
 # Malicious patterns
 MALICIOUS_PATTERNS = [
     re.compile(r'echo\s+bad', re.IGNORECASE),
@@ -24,7 +28,7 @@ def is_malicious(keystroke):
 
 def analyze_keystroke(keystroke):
     processed_keystroke = preprocess_command(keystroke)
-    if is_malicious_ml(processed_keystroke, keystroke_vectorizer, keystroke_clf):
+    if analyze_keystroke(processed_keystroke, keystroke_vectorizer, keystroke_clf):
         print(f"Malicious command detected: {processed_keystroke}")
         return True
     return False
@@ -35,12 +39,38 @@ def analyze_keystroke(keystroke):
     print(f"Processed Command: {processed_keystroke}")   # Debug the preprocessed command
 
     # Perform the analysis
-    if is_malicious_ml(processed_keystroke, keystroke_vectorizer, keystroke_clf):
+    if analyze_keystroke(processed_keystroke, keystroke_vectorizer, keystroke_clf):
         print(f"Malicious command detected: {processed_keystroke}")
         return True
     else:
         print(f"Command is benign: {processed_keystroke}")
         return False
+
+def analyze_payload_lstm(filepath, lstm_model, tokenizer):
+    """Analyze a file's content using the LSTM model."""
+    try:
+        content = read_file_content(filepath)
+        processed_content = preprocess_content(content)
+        sequence = tokenizer.texts_to_sequences([processed_content])
+        padded_sequence = pad_sequences(sequence, maxlen=100, padding='post', truncating='post')
+        prediction = lstm_model.predict(padded_sequence)
+        return prediction[0][0] > 0.5  # Threshold for malicious detection
+    except Exception as e:
+        print(f"Error analyzing file with LSTM: {e}")
+        return False
+
+def analyze_payload_rf(filepath, vectorizer, clf):
+    """Analyze a file's content using the Random Forest model."""
+    try:
+        content = read_file_content(filepath)
+        processed_content = preprocess_content(content)
+        X_test = vectorizer.transform([processed_content])
+        prediction = clf.predict(X_test)
+        return prediction[0] == 1
+    except Exception as e:
+        print(f"Error analyzing file with Random Forest: {e}")
+        return False
+
 
 def analyze_keystroke(keystroke):
     if is_malicious(keystroke):
@@ -49,6 +79,35 @@ def analyze_keystroke(keystroke):
         print(analysis_result)
         return True
     return False
+
+def analyze_file_with_lstm(self, filepath):
+    """Analyze a file's content using the LSTM model."""
+    try:
+        with open(filepath, "r", encoding="utf-8") as file:
+            content = file.read()
+        processed_content = preprocess_content(content)
+        sequence = self.lstm_tokenizer.texts_to_sequences([processed_content])
+        padded_sequence = pad_sequences(sequence, maxlen=100, padding='post', truncating='post')
+        prediction = self.lstm_model.predict(padded_sequence)
+        return prediction[0][0] > 0.5  # Threshold of 0.5 for malicious detection
+    except Exception as e:
+        print(f"Error analyzing file with LSTM: {e}")
+        return False
+
+def analyze_file_with_rf(self, filepath):
+    """Analyze a file's content using the Random Forest model."""
+    try:
+        with open(filepath, "r", encoding="utf-8") as file:
+            content = file.read()
+        processed_content = preprocess_content(content)
+        X_test = self.rf_vectorizer.transform([processed_content])
+        prediction = self.rf_clf.predict(X_test)
+        return prediction[0] == 1  # Label 1 indicates malicious
+    except Exception as e:
+        print(f"Error analyzing file with Random Forest: {e}")
+        return False
+
+
 
 class HIDFirewallApp:
     def __init__(self, root):
@@ -68,7 +127,12 @@ class HIDFirewallApp:
         
         #Load trained models
         self.keystroke_vectorizer, self.keystroke_clf = load_keystroke_model()
-        self.payload_vectorizer, self.payload_clf = load_payload_model()    
+        self.payload_vectorizer, self.payload_clf = load_payload_model_lstm()
+        # Inside the __init__ method of HIDFirewallApp
+        self.rf_vectorizer, self.rf_clf = load_payload_model_rf()  # Load Random Forest model
+        self.lstm_model = load_model('models/lstm_payload_model.h5')  # Load LSTM model
+        with open('models/tokenizer.pkl', 'rb') as tokenizer_file:
+            self.lstm_tokenizer = pickle.load(tokenizer_file)    
 
 
         # USB Devices Frame
@@ -124,27 +188,26 @@ class HIDFirewallApp:
             print(analysis_result)
         self.usb_list.config(state='disabled')
 
+
     def read_usb_contents(self, device):
         # Implement your own method to read contents from the USB device
         # This is a placeholder implementation
         return "Sample content of the USB device.\n"
-
+        
     def on_press(self, key):
+        """Handle intercepted keystrokes."""
         try:
-            keystroke = f'{key.char}'
-        except AttributeError:
-            keystroke = f'{key}'
-        
-        encrypted_keystroke = encrypt_data(keystroke)
-        decrypted_keystroke = decrypt_data(encrypted_keystroke)
-        
-        self.keystroke_list.insert(tk.END, f'\nEncrypted: {encrypted_keystroke}\nDecrypted: {decrypted_keystroke}\n')
+            keystroke = key.char if hasattr(key, 'char') else str(key)
+            encrypted_keystroke = encrypt_data(keystroke)
+            decrypted_keystroke = decrypt_data(encrypted_keystroke)
 
-        if analyze_keystroke(decrypted_keystroke):
-            self.keystroke_list.insert(tk.END, 'Blocking input for 5 seconds...\n', 'highlight')
-            enforcer.enforce_security("block_input", duration=5)  # Use the enforcer to block input
-            enforcer.enforce_security("lock_system")
-            enforcer.enforce_security("disconnect_device", device="Device Name")
+            self.keystroke_list.insert(tk.END, f'\nEncrypted: {encrypted_keystroke}\nDecrypted: {decrypted_keystroke}\n')
+
+            if analyze_keystroke(decrypted_keystroke, self.keystroke_vectorizer, self.keystroke_clf):
+                self.keystroke_list.insert(tk.END, 'Blocking input for 5 seconds...\n', 'highlight')
+                enforcer.enforce_security("block_input", duration=5)  # Use enforcer to block input
+        except Exception as e:
+            self.keystroke_list.insert(tk.END, f"Error: {e}\n")
 
     def on_release(self, key):
         if key == keyboard.Key.esc:
