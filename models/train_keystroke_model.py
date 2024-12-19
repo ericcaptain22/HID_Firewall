@@ -27,6 +27,32 @@ def preprocess_keystroke_data(df):
     df = df.dropna(subset=['ngrams', 'label'])  # Remove rows with NaN values
     return df
 
+def preprocess_and_expand_commands(df):
+    """
+    Preprocess and expand the dataset with n-grams while preserving benign labels.
+    """
+    commands = []
+    labels = []
+    for _, row in df.iterrows():
+        command = row['command']
+        label = row['label']
+        ngrams = generate_ngrams(command)
+        commands.extend(ngrams)
+        labels.extend([label] * len(ngrams))  # Preserve the original label for all n-grams
+    return pd.DataFrame({'command': commands, 'label': labels})
+
+def debug_predictions(df, vectorizer, clf):
+    """
+    Debug predictions for all n-grams in the dataset.
+    """
+    for _, row in df.iterrows():
+        command = row['command']
+        label = row['label']
+        X_test = vectorizer.transform([command])
+        prediction = clf.predict(X_test)
+        print(f"Command: {command}, True Label: {label}, Prediction: {prediction[0]}")
+
+
 def train_keystroke_model(keystroke_file):
     # Load the dataset
     df = pd.read_csv(keystroke_file)

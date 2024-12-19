@@ -104,6 +104,30 @@ def analyze_payload_lstm(filepath, model, tokenizer):
     except Exception as e:
         print(f"Error analyzing payload {filepath} with LSTM: {e}")
         return False
+    
+
+def analyze_keystroke_partial(command, vectorizer, clf):
+    """
+    Analyze a command, including its substrings (n-grams), to check if it's malicious.
+    """
+    ngrams = generate_ngrams(command)
+    is_malicious = False  # Track if any n-gram is malicious
+
+    print(f"Keystroke Analysis - Command: {command}, Prediction: ", end="")
+    for ngram in ngrams:
+        X_test = vectorizer.transform([ngram])
+        prediction = clf.predict(X_test)
+        
+        if prediction[0] == 1:  # Malicious
+            print(f"Malicious n-gram: {ngram}")
+            is_malicious = True
+            break  # Stop at the first malicious match
+    if is_malicious:
+        print(f"Malicious command detected: {command}")
+    else:
+        print("Benign")
+    return is_malicious
+
 
 # Example usage
 if __name__ == "__main__":

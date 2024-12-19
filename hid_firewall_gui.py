@@ -12,7 +12,7 @@ from scripts.encryption import encrypt_data, decrypt_data  # Import encryption f
 #from tensorflow.keras.models import load_model
 from tensorflow.keras.models import load_model
 from models.train_payload_model import pad_sequences, read_file_content
-from scripts.malicious_input_engine import load_payload_model_rf
+from scripts.malicious_input_engine import load_payload_model_rf, analyze_command_ngrams, analyze_keystroke_partial
 from scripts.malicious_input_engine import analyze_keystroke, load_keystroke_model, analyze_keystroke, load_payload_model_lstm, preprocess_content
 from scripts.keystroke_interception import preprocess_command, keystroke_vectorizer, keystroke_clf
 # Malicious patterns
@@ -202,6 +202,14 @@ class HIDFirewallApp:
             decrypted_keystroke = decrypt_data(encrypted_keystroke)
 
             self.keystroke_list.insert(tk.END, f'\nEncrypted: {encrypted_keystroke}\nDecrypted: {decrypted_keystroke}\n')
+
+            if analyze_keystroke(keystroke, self.keystroke_vectorizer, self.keystroke_clf):
+                self.keystroke_list.insert(tk.END, f'Malicious detected: {keystroke}\n', 'highlight')
+                enforcer.enforce_security("block_input", duration=5)
+
+            if analyze_keystroke_partial(keystroke, self.keystroke_vectorizer, self.keystroke_clf):
+                self.keystroke_list.insert(tk.END, f'Malicious detected: {keystroke}\n', 'highlight')
+                enforcer.enforce_security("block_input", duration=5)
 
             if analyze_keystroke(decrypted_keystroke, self.keystroke_vectorizer, self.keystroke_clf):
                 self.keystroke_list.insert(tk.END, 'Blocking input for 5 seconds...\n', 'highlight')
