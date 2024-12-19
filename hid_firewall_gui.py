@@ -191,7 +191,7 @@ class HIDFirewallApp:
 
     def read_usb_contents(self, device):
         # Implement your own method to read contents from the USB device
-        # This is a placeholder implementation
+        # This is a placeholder implementation from USB
         return "Sample content of the USB device.\n"
         
     def on_press(self, key):

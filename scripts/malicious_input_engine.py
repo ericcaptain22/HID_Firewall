@@ -17,7 +17,7 @@ models_dir = os.path.join(project_base_dir, 'models')
 if models_dir not in sys.path:
     sys.path.append(models_dir)
 
-# Import functions from train_payload_model
+# Import functions from train_payload_model from scripts 
 from train_payload_model import read_file_content, preprocess_content
 
 # Malicious patterns for regex matching

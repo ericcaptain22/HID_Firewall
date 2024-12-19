@@ -9,7 +9,7 @@ project_base_dir = os.path.abspath(os.path.join(current_dir, '..'))
 if project_base_dir not in sys.path:
     sys.path.append(project_base_dir)
     
-# Load the trained keystroke model
+# Load the trained keystroke model involved
 keystroke_vectorizer, keystroke_clf = load_keystroke_model()
 
 count = 0
