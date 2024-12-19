@@ -1,17 +1,10 @@
-# Ignore all files in site-packages
+# Ignore site-packages
 hid/lib/python3.12/site-packages/
 
-# Ignore Python bytecode
-*.pyc
-__pycache__/
-
 # Ignore large model files
-models/*.h5
-models/*.keras
-models/*.pkl
+*.h5
+*.so
+*.cc
 
-# Ignore virtual environments
-hid/
-*.egg-info
-.env/
-venv/
+# Ignore TensorFlow binaries
+tensorflow/libtensorflow*.so.*
