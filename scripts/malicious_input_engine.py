@@ -46,7 +46,7 @@ def is_malicious_regex(keystroke):
 
 def load_keystroke_model():
     """Load the trained keystroke model."""
-    with open(os.path.join(models_dir, 'keystroke_model.pkl'), 'rb') as model_file:
+    with open(os.path.join('models', 'keystroke_model.pkl'), 'rb') as model_file:
         vectorizer, clf = pickle.load(model_file)
     return vectorizer, clf
 

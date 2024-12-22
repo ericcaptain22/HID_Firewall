@@ -1,69 +1,68 @@
-# File: scripts/sandbox_analysis.py
-
 import tempfile
 import subprocess
 import os
+import logging
+
+# Configure logging
+logging.basicConfig(
+    filename="sandbox_analysis.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+def execute_in_sandbox(command, sandbox_type="keystroke"):
+    """
+    Execute a command or analyze input in a sandbox environment.
+    This uses a temporary directory and subprocess to simulate isolation.
+    """
+    try:
+        # Create a temporary working directory
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp_file_path = os.path.join(temp_dir, f"{sandbox_type}_input.txt")
+
+            # Write the input to a temporary file
+            with open(temp_file_path, "w") as temp_file:
+                temp_file.write(command)
+
+            # Simulate sandbox execution (e.g., run the command in a safe environment)
+            result = subprocess.run(
+                ["cat", temp_file_path],  # Replace with your sandbox tool (e.g., Docker/chroot)
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True
+            )
+
+            # Log the analysis details
+            logging.info(f"Sandbox Execution: {sandbox_type} input executed.")
+            logging.info(f"Output: {result.stdout}")
+            logging.info(f"Errors: {result.stderr}")
+
+            # Example: Check for suspicious patterns in output
+            if "bad" in result.stdout.lower():
+                return {"status": "malicious", "details": "Detected malicious behavior in sandbox."}
+
+            return {"status": "safe", "details": "No malicious behavior detected."}
+    except Exception as e:
+        logging.error(f"Error during sandbox execution: {e}")
+        return {"status": "error", "details": str(e)}
 
 def analyze_keystroke_sandbox(keystroke):
     """
     Analyze a keystroke in a sandbox environment.
-    This function runs the keystroke in a temporary, isolated environment to observe its behavior.
     """
-    try:
-        # Create a temporary file to hold the keystroke
-        with tempfile.NamedTemporaryFile(delete=False, mode='w', suffix='.txt') as temp_file:
-            temp_file.write(keystroke)
-            temp_file_path = temp_file.name
-
-        # Define a sandboxed environment for analysis (this is a placeholder, actual implementation may vary)
-        # Here we simulate the sandbox by simply reading the file contents
-        with open(temp_file_path, 'r') as file:
-            analyzed_content = file.read()
-            print(f"Analyzed content: {analyzed_content}")
-
-        # Perform additional analysis as needed (e.g., running the keystroke in a virtual machine or container)
-
-        # Return the result of the analysis
-        return {"status": "safe", "details": "Keystroke is not malicious"}  # Example result
-    except Exception as e:
-        return {"status": "error", "details": str(e)}
-    finally:
-        # Clean up the temporary file
-        if os.path.exists(temp_file_path):
-            os.remove(temp_file_path)
+    return execute_in_sandbox(keystroke, sandbox_type="keystroke")
 
 def analyze_usb_device_sandbox(device_info):
     """
     Analyze a USB device in a sandbox environment.
-    This function runs the device's information in a temporary, isolated environment to observe its behavior.
     """
-    try:
-        # Create a temporary file to hold the device info
-        with tempfile.NamedTemporaryFile(delete=False, mode='w', suffix='.txt') as temp_file:
-            temp_file.write(device_info)
-            temp_file_path = temp_file.name
-
-        # Define a sandboxed environment for analysis (this is a placeholder, actual implementation may vary)
-        # Here we simulate the sandbox by simply reading the file contents
-        with open(temp_file_path, 'r') as file:
-            analyzed_content = file.read()
-            print(f"Analyzed content: {analyzed_content}")
-
-        # Perform additional analysis as needed (e.g., running the device info in a virtual machine or container)
-
-        # Return the result of the analysis
-        return {"status": "safe", "details": "USB device is not malicious"}  # Example result
-    except Exception as e:
-        return {"status": "error", "details": str(e)}
-    finally:
-        # Clean up the temporary file
-        if os.path.exists(temp_file_path):
-            os.remove(temp_file_path)
+    return execute_in_sandbox(device_info, sandbox_type="usb_device")
 
 if __name__ == "__main__":
-    # Example usage
-    keystroke_result = analyze_keystroke_sandbox("echo bad")
+    # Example usage for keystroke analysis
+    keystroke_result = analyze_keystroke_sandbox("chmod +x bad_script.sh")
     print(keystroke_result)
 
-    usb_device_result = analyze_usb_device_sandbox("USB Device Info")
+    # Example usage for USB device analysis
+    usb_device_result = analyze_usb_device_sandbox("Fake USB Device Info")
     print(usb_device_result)

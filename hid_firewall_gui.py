@@ -12,9 +12,10 @@ from scripts.encryption import encrypt_data, decrypt_data  # Import encryption f
 #from tensorflow.keras.models import load_model
 from tensorflow.keras.models import load_model
 from models.train_payload_model import pad_sequences, read_file_content
-from scripts.malicious_input_engine import load_payload_model_rf, analyze_command_ngrams, analyze_keystroke_partial
+from scripts.malicious_input_engine import load_payload_model_rf, analyze_keystroke_partial
 from scripts.malicious_input_engine import analyze_keystroke, load_keystroke_model, analyze_keystroke, load_payload_model_lstm, preprocess_content
 from scripts.keystroke_interception import preprocess_command, keystroke_vectorizer, keystroke_clf
+from scripts.sandbox_analysis import analyze_keystroke_sandbox, analyze_usb_device_sandbox
 # Malicious patterns
 MALICIOUS_PATTERNS = [
     re.compile(r'echo\s+bad', re.IGNORECASE),
@@ -187,6 +188,10 @@ class HIDFirewallApp:
             self.device_analysis_results.append((device, analysis_result))
             print(analysis_result)
         self.usb_list.config(state='disabled')
+        sandbox_result = analyze_usb_device_sandbox(content)
+        if sandbox_result['status'] == 'malicious':
+            self.usb_list.insert(tk.END, f"Sandbox Alert: {sandbox_result['details']}\n", "highlight")
+
 
 
     def read_usb_contents(self, device):
@@ -202,6 +207,10 @@ class HIDFirewallApp:
             decrypted_keystroke = decrypt_data(encrypted_keystroke)
 
             self.keystroke_list.insert(tk.END, f'\nEncrypted: {encrypted_keystroke}\nDecrypted: {decrypted_keystroke}\n')
+            
+            if analyze_keystroke_sandbox(keystroke)['status'] == 'malicious':
+                print(f"Malicious keystroke detected: {keystroke}")
+                self.keystroke_list.insert(tk.END, "Sandbox Alert: Malicious keystroke detected.\n", "highlight")
 
             if analyze_keystroke(keystroke, self.keystroke_vectorizer, self.keystroke_clf):
                 self.keystroke_list.insert(tk.END, f'Malicious detected: {keystroke}\n', 'highlight')
