@@ -1,14 +1,14 @@
 # File: tests/test_analysis.py
 
 import unittest
-from scripts.malicious_input_engine import analyze_keystroke, load_trained_model
+from scripts.malicious_input_engine import analyze_keystroke, load_keystroke_model
 
 class TestMaliciousInputEngine(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
         # Load the model and vectorizer once for all tests
-        cls.vectorizer, cls.clf = load_trained_model()
+        cls.vectorizer, cls.clf = load_keystroke_model()
 
     def test_benign_keystroke(self):
         benign_keystroke = "ls -la"
