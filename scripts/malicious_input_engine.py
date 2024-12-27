@@ -17,7 +17,7 @@ models_dir = os.path.join(project_base_dir, 'models')
 if models_dir not in sys.path:
     sys.path.append(models_dir)
 
-# Import functions from train_payload_model from scripts 
+# Import functions from train_payload_model
 from train_payload_model import read_file_content, preprocess_content
 
 # Malicious patterns for regex matching
@@ -33,7 +33,7 @@ MAX_SEQUENCE_LENGTH = 100
 def generate_ngrams(command, n=2):
     """Generate n-grams from a command string."""
     tokens = command.split()
-    return [" ".join(tokens[i:i+n]) for i in range(len(tokens)-n+1)] if len(tokens) >= n else [command]
+    return [" ".join(tokens[i:i + n]) for i in range(len(tokens) - n + 1)] if len(tokens) >= n else [command]
 
 def is_malicious_regex(keystroke):
     """
@@ -64,16 +64,27 @@ def load_payload_model_lstm():
     return model, tokenizer
 
 def analyze_keystroke(command, vectorizer, clf):
-    """Analyze a command using Random Forest to check if it is malicious."""
+    """
+    Analyze a keystroke using the keystroke detection model (Random Forest).
+    - Incorporates n-gram analysis to detect partial commands.
+    """
     ngrams = generate_ngrams(command)
+    is_malicious = False
+
+    print(f"Keystroke Analysis - Command: {command}, Prediction: ", end="")
     for ngram in ngrams:
         X_test = vectorizer.transform([ngram])
         prediction = clf.predict(X_test)
-        if prediction[0] == 1:
-            print(f"Keystroke Analysis - Malicious n-gram: {ngram}")
-            return True
-    print(f"Keystroke Analysis - Command: {command}, Prediction: Benign")
-    return False
+        
+        if prediction[0] == 1:  # Malicious n-gram detected
+            print(f"Malicious n-gram: {ngram}")
+            is_malicious = True
+            break
+    if is_malicious:
+        print(f"Malicious command detected: {command}")
+    else:
+        print("Benign")
+    return is_malicious
 
 def analyze_payload_rf(filepath, vectorizer, clf):
     """Analyze a payload using Random Forest to check if it is malicious."""
@@ -104,7 +115,6 @@ def analyze_payload_lstm(filepath, model, tokenizer):
     except Exception as e:
         print(f"Error analyzing payload {filepath} with LSTM: {e}")
         return False
-    
 
 def analyze_keystroke_partial(command, vectorizer, clf):
     """
@@ -127,7 +137,6 @@ def analyze_keystroke_partial(command, vectorizer, clf):
     else:
         print("Benign")
     return is_malicious
-
 
 # Example usage
 if __name__ == "__main__":

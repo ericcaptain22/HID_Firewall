@@ -8,7 +8,7 @@ from scripts import sandbox_analysis
 from scripts import enforcer
 from scripts import device_detection
 from scripts import keystroke_interception
-from scripts.encryption import encrypt_data, decrypt_data  # Import encryption functions
+from scripts.encryption import encrypt_message, decrypt_message  # Import encryption functions
 #from tensorflow.keras.models import load_model
 from tensorflow.keras.models import load_model
 from models.train_payload_model import pad_sequences, read_file_content
@@ -176,7 +176,7 @@ class HIDFirewallApp:
     def list_usb_devices(self):
         devices = device_detection.detect_usb_devices()
         self.device_analysis_results = []  # Store analysis results
-        device_list = device_detection.list_devices(devices)
+        device_list = device_detection.list_usb_devices(devices)
         self.usb_list.config(state='normal')
         self.usb_list.delete('1.0', tk.END)
         for device in device_list:
@@ -203,8 +203,8 @@ class HIDFirewallApp:
         """Handle intercepted keystrokes."""
         try:
             keystroke = key.char if hasattr(key, 'char') else str(key)
-            encrypted_keystroke = encrypt_data(keystroke)
-            decrypted_keystroke = decrypt_data(encrypted_keystroke)
+            encrypted_keystroke = encrypt_message(keystroke)
+            decrypted_keystroke = decrypt_message(encrypted_keystroke)
 
             self.keystroke_list.insert(tk.END, f'\nEncrypted: {encrypted_keystroke}\nDecrypted: {decrypted_keystroke}\n')
             

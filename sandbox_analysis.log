@@ -298,3 +298,1811 @@ See 'docker run --help'.
 2024-12-26 23:07:04,128 - INFO - Output: Sample content of the USB device.
 
 2024-12-26 23:07:04,128 - INFO - Errors: 
+2024-12-26 23:53:10,263 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-26 23:53:10,264 - INFO - Output: 
+2024-12-26 23:53:10,264 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-26 23:53:10,396 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-26 23:53:10,396 - INFO - Output: 
+2024-12-26 23:53:10,396 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:02:13,058 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:02:13,110 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:03:33,404 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:03:33,460 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:03:36,086 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:03:36,086 - INFO - Output: 
+2024-12-27 15:03:36,086 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:36,216 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:03:36,217 - INFO - Output: 
+2024-12-27 15:03:36,217 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:36,347 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:03:36,348 - INFO - Output: 
+2024-12-27 15:03:36,348 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:36,481 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:03:36,481 - INFO - Output: 
+2024-12-27 15:03:36,481 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:36,613 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:03:36,614 - INFO - Output: 
+2024-12-27 15:03:36,614 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:36,744 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:03:36,745 - INFO - Output: 
+2024-12-27 15:03:36,745 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:36,877 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:03:36,877 - INFO - Output: 
+2024-12-27 15:03:36,877 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:37,006 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:03:37,006 - INFO - Output: 
+2024-12-27 15:03:37,006 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:55,895 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:03:55,896 - INFO - Output: 
+2024-12-27 15:03:55,896 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:56,029 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:03:56,029 - INFO - Output: 
+2024-12-27 15:03:56,030 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:56,161 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:03:56,162 - INFO - Output: 
+2024-12-27 15:03:56,162 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:56,324 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:03:56,324 - INFO - Output: 
+2024-12-27 15:03:56,324 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:57,470 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:03:57,470 - INFO - Output: 
+2024-12-27 15:03:57,470 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:03:57,663 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:03:57,663 - INFO - Output: 
+2024-12-27 15:03:57,663 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:01,177 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:01,177 - INFO - Output: 
+2024-12-27 15:04:01,177 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:01,356 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:01,356 - INFO - Output: 
+2024-12-27 15:04:01,356 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:01,570 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:01,570 - INFO - Output: 
+2024-12-27 15:04:01,570 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:01,704 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:01,704 - INFO - Output: 
+2024-12-27 15:04:01,704 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:01,836 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:01,836 - INFO - Output: 
+2024-12-27 15:04:01,836 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:02,125 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:02,125 - INFO - Output: 
+2024-12-27 15:04:02,126 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:02,601 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:02,601 - INFO - Output: 
+2024-12-27 15:04:02,601 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:02,770 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:02,770 - INFO - Output: 
+2024-12-27 15:04:02,770 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:03,094 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:03,094 - INFO - Output: 
+2024-12-27 15:04:03,094 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:03,232 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:03,232 - INFO - Output: 
+2024-12-27 15:04:03,232 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:04,347 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:04,347 - INFO - Output: 
+2024-12-27 15:04:04,347 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:05,317 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:05,317 - INFO - Output: 
+2024-12-27 15:04:05,317 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:05,541 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:05,541 - INFO - Output: 
+2024-12-27 15:04:05,541 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:10,438 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:10,438 - INFO - Output: 
+2024-12-27 15:04:10,438 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:10,632 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:10,632 - INFO - Output: 
+2024-12-27 15:04:10,632 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:10,918 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:10,919 - INFO - Output: 
+2024-12-27 15:04:10,919 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:11,052 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:11,053 - INFO - Output: 
+2024-12-27 15:04:11,053 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:11,257 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:11,257 - INFO - Output: 
+2024-12-27 15:04:11,257 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:11,596 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:11,596 - INFO - Output: 
+2024-12-27 15:04:11,596 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:11,726 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:11,727 - INFO - Output: 
+2024-12-27 15:04:11,727 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:11,857 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:11,857 - INFO - Output: 
+2024-12-27 15:04:11,857 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:11,992 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:11,993 - INFO - Output: 
+2024-12-27 15:04:11,993 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:12,126 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:12,126 - INFO - Output: 
+2024-12-27 15:04:12,126 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:18,074 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:18,075 - INFO - Output: 
+2024-12-27 15:04:18,075 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:18,207 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:18,207 - INFO - Output: 
+2024-12-27 15:04:18,207 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:18,394 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:18,395 - INFO - Output: 
+2024-12-27 15:04:18,395 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:19,029 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:19,030 - INFO - Output: 
+2024-12-27 15:04:19,030 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:19,312 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:19,312 - INFO - Output: 
+2024-12-27 15:04:19,312 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:19,678 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:19,679 - INFO - Output: 
+2024-12-27 15:04:19,679 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:21,491 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:21,491 - INFO - Output: 
+2024-12-27 15:04:21,491 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:21,621 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:21,621 - INFO - Output: 
+2024-12-27 15:04:21,622 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:22,449 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:22,449 - INFO - Output: 
+2024-12-27 15:04:22,449 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:22,692 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:22,692 - INFO - Output: 
+2024-12-27 15:04:22,692 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:22,893 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:22,894 - INFO - Output: 
+2024-12-27 15:04:22,894 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:23,025 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:04:23,025 - INFO - Output: 
+2024-12-27 15:04:23,025 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:55,405 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:04:55,473 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:04:57,934 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:04:57,934 - INFO - Output: 
+2024-12-27 15:04:57,934 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:58,064 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:04:58,064 - INFO - Output: 
+2024-12-27 15:04:58,064 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:58,193 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:04:58,194 - INFO - Output: 
+2024-12-27 15:04:58,194 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:58,327 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:04:58,327 - INFO - Output: 
+2024-12-27 15:04:58,327 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:58,460 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:04:58,461 - INFO - Output: 
+2024-12-27 15:04:58,461 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:58,594 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:04:58,595 - INFO - Output: 
+2024-12-27 15:04:58,595 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:58,729 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:04:58,729 - INFO - Output: 
+2024-12-27 15:04:58,729 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:04:58,863 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:04:58,863 - INFO - Output: 
+2024-12-27 15:04:58,863 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:08:31,330 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:09:38,928 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:09:39,018 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:10:09,775 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:10:09,835 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:10:11,696 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:10:11,696 - INFO - Output: 
+2024-12-27 15:10:11,696 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:11,827 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:10:11,827 - INFO - Output: 
+2024-12-27 15:10:11,827 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:11,953 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:10:11,953 - INFO - Output: 
+2024-12-27 15:10:11,953 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:12,080 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:10:12,080 - INFO - Output: 
+2024-12-27 15:10:12,080 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:12,211 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:10:12,211 - INFO - Output: 
+2024-12-27 15:10:12,211 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:12,339 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:10:12,340 - INFO - Output: 
+2024-12-27 15:10:12,340 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:12,470 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:10:12,470 - INFO - Output: 
+2024-12-27 15:10:12,471 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:22,076 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:10:22,077 - INFO - Output: 
+2024-12-27 15:10:22,077 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:22,456 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:10:22,456 - INFO - Output: 
+2024-12-27 15:10:22,456 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:29,769 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:10:29,769 - INFO - Output: 
+2024-12-27 15:10:29,769 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:29,905 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:10:29,905 - INFO - Output: 
+2024-12-27 15:10:29,905 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:30,071 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:10:30,071 - INFO - Output: 
+2024-12-27 15:10:30,071 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:30,210 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:10:30,210 - INFO - Output: 
+2024-12-27 15:10:30,210 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:30,403 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:10:30,403 - INFO - Output: 
+2024-12-27 15:10:30,403 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:10:30,541 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:10:30,541 - INFO - Output: 
+2024-12-27 15:10:30,541 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:03,081 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:11:03,162 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:11:05,341 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:11:05,341 - INFO - Output: 
+2024-12-27 15:11:05,342 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:05,473 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:11:05,474 - INFO - Output: 
+2024-12-27 15:11:05,474 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:05,602 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:11:05,602 - INFO - Output: 
+2024-12-27 15:11:05,602 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:05,730 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:11:05,730 - INFO - Output: 
+2024-12-27 15:11:05,730 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:05,864 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:11:05,864 - INFO - Output: 
+2024-12-27 15:11:05,864 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:05,996 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:11:05,996 - INFO - Output: 
+2024-12-27 15:11:05,996 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:06,125 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:11:06,126 - INFO - Output: 
+2024-12-27 15:11:06,126 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:06,261 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:11:06,262 - INFO - Output: 
+2024-12-27 15:11:06,262 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:10,521 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:10,521 - INFO - Output: 
+2024-12-27 15:11:10,521 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:10,654 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:10,654 - INFO - Output: 
+2024-12-27 15:11:10,655 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:10,787 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:10,787 - INFO - Output: 
+2024-12-27 15:11:10,787 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:11,715 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:11,715 - INFO - Output: 
+2024-12-27 15:11:11,715 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:11,921 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:11,921 - INFO - Output: 
+2024-12-27 15:11:11,921 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:12,052 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:12,052 - INFO - Output: 
+2024-12-27 15:11:12,052 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:12,427 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:12,427 - INFO - Output: 
+2024-12-27 15:11:12,427 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:17,227 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:17,227 - INFO - Output: 
+2024-12-27 15:11:17,227 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:17,408 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:17,409 - INFO - Output: 
+2024-12-27 15:11:17,409 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:20,328 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:20,328 - INFO - Output: 
+2024-12-27 15:11:20,328 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:20,500 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:20,500 - INFO - Output: 
+2024-12-27 15:11:20,500 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:20,628 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:20,628 - INFO - Output: 
+2024-12-27 15:11:20,628 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:20,804 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:20,804 - INFO - Output: 
+2024-12-27 15:11:20,804 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:20,958 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:20,958 - INFO - Output: 
+2024-12-27 15:11:20,958 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:21,479 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:21,479 - INFO - Output: 
+2024-12-27 15:11:21,479 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:21,857 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:21,857 - INFO - Output: 
+2024-12-27 15:11:21,857 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:22,001 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:22,002 - INFO - Output: 
+2024-12-27 15:11:22,002 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:45,839 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:45,839 - INFO - Output: 
+2024-12-27 15:11:45,839 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:45,986 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:45,986 - INFO - Output: 
+2024-12-27 15:11:45,986 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:46,385 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:46,385 - INFO - Output: 
+2024-12-27 15:11:46,385 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:46,515 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:46,515 - INFO - Output: 
+2024-12-27 15:11:46,515 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:46,660 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:46,660 - INFO - Output: 
+2024-12-27 15:11:46,660 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:11:47,218 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:11:47,218 - INFO - Output: 
+2024-12-27 15:11:47,219 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:01,991 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:01,991 - INFO - Output: 
+2024-12-27 15:12:01,991 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:02,168 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:02,168 - INFO - Output: 
+2024-12-27 15:12:02,168 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:02,808 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:02,808 - INFO - Output: 
+2024-12-27 15:12:02,808 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:02,960 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:02,960 - INFO - Output: 
+2024-12-27 15:12:02,961 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:03,258 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:03,259 - INFO - Output: 
+2024-12-27 15:12:03,259 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:03,715 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:03,716 - INFO - Output: 
+2024-12-27 15:12:03,716 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:08,178 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:08,178 - INFO - Output: 
+2024-12-27 15:12:08,178 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:08,317 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:08,318 - INFO - Output: 
+2024-12-27 15:12:08,318 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:08,626 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:08,626 - INFO - Output: 
+2024-12-27 15:12:08,626 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:10,038 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:10,038 - INFO - Output: 
+2024-12-27 15:12:10,038 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:10,314 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:10,314 - INFO - Output: 
+2024-12-27 15:12:10,314 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:10,514 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:10,514 - INFO - Output: 
+2024-12-27 15:12:10,514 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:10,648 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:10,648 - INFO - Output: 
+2024-12-27 15:12:10,648 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:12:10,901 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:12:10,902 - INFO - Output: 
+2024-12-27 15:12:10,902 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:10,876 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:18:10,945 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:18:13,160 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:18:13,160 - INFO - Output: 
+2024-12-27 15:18:13,160 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:13,288 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:18:13,288 - INFO - Output: 
+2024-12-27 15:18:13,288 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:13,414 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:18:13,415 - INFO - Output: 
+2024-12-27 15:18:13,415 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:13,546 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:18:13,547 - INFO - Output: 
+2024-12-27 15:18:13,547 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:13,679 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:18:13,679 - INFO - Output: 
+2024-12-27 15:18:13,679 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:13,810 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:18:13,811 - INFO - Output: 
+2024-12-27 15:18:13,811 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:13,940 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:18:13,940 - INFO - Output: 
+2024-12-27 15:18:13,940 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:14,067 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:18:14,068 - INFO - Output: 
+2024-12-27 15:18:14,068 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:18,054 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:18,054 - INFO - Output: 
+2024-12-27 15:18:18,054 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:18,185 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:18,185 - INFO - Output: 
+2024-12-27 15:18:18,185 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:18,673 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:18,673 - INFO - Output: 
+2024-12-27 15:18:18,673 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:19,079 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:19,079 - INFO - Output: 
+2024-12-27 15:18:19,079 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:19,358 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:19,358 - INFO - Output: 
+2024-12-27 15:18:19,358 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:19,487 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:19,487 - INFO - Output: 
+2024-12-27 15:18:19,487 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:19,671 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:19,671 - INFO - Output: 
+2024-12-27 15:18:19,671 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:23,034 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:23,034 - INFO - Output: 
+2024-12-27 15:18:23,034 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:23,318 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:23,318 - INFO - Output: 
+2024-12-27 15:18:23,318 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:23,561 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:23,561 - INFO - Output: 
+2024-12-27 15:18:23,561 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:24,170 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:24,170 - INFO - Output: 
+2024-12-27 15:18:24,170 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:24,393 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:24,393 - INFO - Output: 
+2024-12-27 15:18:24,393 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:24,673 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:24,673 - INFO - Output: 
+2024-12-27 15:18:24,673 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:24,922 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:24,923 - INFO - Output: 
+2024-12-27 15:18:24,923 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:18:25,142 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:18:25,142 - INFO - Output: 
+2024-12-27 15:18:25,142 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:14,181 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:44:14,236 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 15:44:16,367 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:44:16,367 - INFO - Output: 
+2024-12-27 15:44:16,367 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:16,494 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:44:16,494 - INFO - Output: 
+2024-12-27 15:44:16,495 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:16,611 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:44:16,611 - INFO - Output: 
+2024-12-27 15:44:16,611 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:16,726 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:44:16,726 - INFO - Output: 
+2024-12-27 15:44:16,726 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:16,842 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:44:16,842 - INFO - Output: 
+2024-12-27 15:44:16,842 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:16,973 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:44:16,973 - INFO - Output: 
+2024-12-27 15:44:16,973 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:17,107 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:44:17,108 - INFO - Output: 
+2024-12-27 15:44:17,108 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:17,241 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 15:44:17,241 - INFO - Output: 
+2024-12-27 15:44:17,241 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:23,005 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:44:23,005 - INFO - Output: 
+2024-12-27 15:44:23,005 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:23,141 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:44:23,142 - INFO - Output: 
+2024-12-27 15:44:23,142 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:23,298 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:44:23,298 - INFO - Output: 
+2024-12-27 15:44:23,298 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:24,130 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:44:24,130 - INFO - Output: 
+2024-12-27 15:44:24,130 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:24,400 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:44:24,401 - INFO - Output: 
+2024-12-27 15:44:24,401 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 15:44:24,662 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 15:44:24,662 - INFO - Output: 
+2024-12-27 15:44:24,662 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:50:03,475 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 22:50:03,589 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 22:52:35,008 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 22:52:35,159 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 22:52:40,030 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:52:40,030 - INFO - Output: 
+2024-12-27 22:52:40,030 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:52:40,158 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:52:40,159 - INFO - Output: 
+2024-12-27 22:52:40,159 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:52:40,290 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:52:40,291 - INFO - Output: 
+2024-12-27 22:52:40,291 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:52:40,424 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:52:40,424 - INFO - Output: 
+2024-12-27 22:52:40,424 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:52:40,556 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:52:40,556 - INFO - Output: 
+2024-12-27 22:52:40,557 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:52:40,683 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:52:40,683 - INFO - Output: 
+2024-12-27 22:52:40,683 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:52:40,813 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:52:40,813 - INFO - Output: 
+2024-12-27 22:52:40,814 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:52:40,948 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:52:40,948 - INFO - Output: 
+2024-12-27 22:52:40,948 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:55:48,781 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 22:55:48,879 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 22:56:25,425 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 22:56:25,528 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 22:56:29,261 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:56:29,261 - INFO - Output: 
+2024-12-27 22:56:29,261 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:29,391 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:56:29,391 - INFO - Output: 
+2024-12-27 22:56:29,391 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:29,521 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:56:29,522 - INFO - Output: 
+2024-12-27 22:56:29,522 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:29,654 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:56:29,655 - INFO - Output: 
+2024-12-27 22:56:29,655 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:29,784 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:56:29,784 - INFO - Output: 
+2024-12-27 22:56:29,784 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:29,916 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:56:29,917 - INFO - Output: 
+2024-12-27 22:56:29,917 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:30,048 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:56:30,048 - INFO - Output: 
+2024-12-27 22:56:30,048 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:30,178 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 22:56:30,178 - INFO - Output: 
+2024-12-27 22:56:30,178 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:38,429 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:38,430 - INFO - Output: 
+2024-12-27 22:56:38,430 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:38,560 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:38,560 - INFO - Output: 
+2024-12-27 22:56:38,560 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:40,171 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:40,171 - INFO - Output: 
+2024-12-27 22:56:40,171 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:40,514 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:40,514 - INFO - Output: 
+2024-12-27 22:56:40,514 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:40,753 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:40,753 - INFO - Output: 
+2024-12-27 22:56:40,753 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:47,172 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:47,172 - INFO - Output: 
+2024-12-27 22:56:47,172 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:48,800 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:48,801 - INFO - Output: 
+2024-12-27 22:56:48,801 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:48,972 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:48,973 - INFO - Output: 
+2024-12-27 22:56:48,973 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:49,102 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:49,102 - INFO - Output: 
+2024-12-27 22:56:49,102 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:49,282 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:49,282 - INFO - Output: 
+2024-12-27 22:56:49,283 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:49,455 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:49,456 - INFO - Output: 
+2024-12-27 22:56:49,456 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:49,616 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:49,616 - INFO - Output: 
+2024-12-27 22:56:49,616 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:56:49,756 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:56:49,756 - INFO - Output: 
+2024-12-27 22:56:49,756 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:24,827 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:24,827 - INFO - Output: 
+2024-12-27 22:57:24,827 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:25,087 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:25,087 - INFO - Output: 
+2024-12-27 22:57:25,087 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:25,290 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:25,290 - INFO - Output: 
+2024-12-27 22:57:25,291 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:25,439 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:25,439 - INFO - Output: 
+2024-12-27 22:57:25,440 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:25,570 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:25,571 - INFO - Output: 
+2024-12-27 22:57:25,571 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:25,756 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:25,756 - INFO - Output: 
+2024-12-27 22:57:25,756 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:25,978 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:25,978 - INFO - Output: 
+2024-12-27 22:57:25,978 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:26,447 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:26,447 - INFO - Output: 
+2024-12-27 22:57:26,447 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:26,745 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:26,745 - INFO - Output: 
+2024-12-27 22:57:26,745 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:26,920 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:26,920 - INFO - Output: 
+2024-12-27 22:57:26,920 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 22:57:27,059 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-27 22:57:27,059 - INFO - Output: 
+2024-12-27 22:57:27,059 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:04:50,303 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:04:50,394 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:04:52,566 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:04:52,566 - INFO - Output: 
+2024-12-27 23:04:52,566 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:04:52,699 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:04:52,700 - INFO - Output: 
+2024-12-27 23:04:52,700 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:04:52,827 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:04:52,828 - INFO - Output: 
+2024-12-27 23:04:52,828 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:04:52,971 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:04:52,971 - INFO - Output: 
+2024-12-27 23:04:52,971 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:04:53,100 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:04:53,100 - INFO - Output: 
+2024-12-27 23:04:53,100 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:04:53,232 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:04:53,232 - INFO - Output: 
+2024-12-27 23:04:53,232 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:04:53,361 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:04:53,361 - INFO - Output: 
+2024-12-27 23:04:53,361 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:04:53,492 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:04:53,492 - INFO - Output: 
+2024-12-27 23:04:53,492 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:05:56,812 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:05:56,879 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:06:00,738 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:06:00,738 - INFO - Output: 
+2024-12-27 23:06:00,738 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:06:00,871 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:06:00,871 - INFO - Output: 
+2024-12-27 23:06:00,871 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:06:01,003 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:06:01,003 - INFO - Output: 
+2024-12-27 23:06:01,003 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:06:01,132 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:06:01,132 - INFO - Output: 
+2024-12-27 23:06:01,132 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:06:01,262 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:06:01,262 - INFO - Output: 
+2024-12-27 23:06:01,262 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:06:01,391 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:06:01,391 - INFO - Output: 
+2024-12-27 23:06:01,392 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:06:01,523 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:06:01,523 - INFO - Output: 
+2024-12-27 23:06:01,523 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:06:01,654 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:06:01,654 - INFO - Output: 
+2024-12-27 23:06:01,654 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:35:37,797 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:35:37,863 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:35:40,087 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:35:40,087 - INFO - Output: 
+2024-12-27 23:35:40,087 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:35:40,215 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:35:40,215 - INFO - Output: 
+2024-12-27 23:35:40,215 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:35:40,345 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:35:40,346 - INFO - Output: 
+2024-12-27 23:35:40,346 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:35:40,479 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:35:40,479 - INFO - Output: 
+2024-12-27 23:35:40,479 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:35:40,606 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:35:40,606 - INFO - Output: 
+2024-12-27 23:35:40,606 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:35:40,733 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:35:40,733 - INFO - Output: 
+2024-12-27 23:35:40,733 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:35:40,865 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:35:40,865 - INFO - Output: 
+2024-12-27 23:35:40,865 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:35:40,995 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:35:40,995 - INFO - Output: 
+2024-12-27 23:35:40,995 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:42:12,336 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:42:12,407 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:43:27,701 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:43:27,778 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:43:35,115 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:43:35,115 - INFO - Output: 
+2024-12-27 23:43:35,115 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:43:35,246 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:43:35,246 - INFO - Output: 
+2024-12-27 23:43:35,246 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:43:35,377 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:43:35,377 - INFO - Output: 
+2024-12-27 23:43:35,377 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:43:35,508 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:43:35,508 - INFO - Output: 
+2024-12-27 23:43:35,508 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:43:35,641 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:43:35,641 - INFO - Output: 
+2024-12-27 23:43:35,641 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:43:35,769 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:43:35,770 - INFO - Output: 
+2024-12-27 23:43:35,770 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:43:35,900 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:43:35,900 - INFO - Output: 
+2024-12-27 23:43:35,900 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:43:36,030 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:43:36,030 - INFO - Output: 
+2024-12-27 23:43:36,030 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:44:08,296 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:44:08,354 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:44:25,743 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:44:25,744 - INFO - Output: 
+2024-12-27 23:44:25,744 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:44:25,872 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:44:25,872 - INFO - Output: 
+2024-12-27 23:44:25,872 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:44:26,003 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:44:26,004 - INFO - Output: 
+2024-12-27 23:44:26,004 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:44:26,134 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:44:26,134 - INFO - Output: 
+2024-12-27 23:44:26,134 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:44:26,266 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:44:26,266 - INFO - Output: 
+2024-12-27 23:44:26,266 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:44:26,396 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:44:26,396 - INFO - Output: 
+2024-12-27 23:44:26,396 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:44:26,525 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:44:26,525 - INFO - Output: 
+2024-12-27 23:44:26,525 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:44:26,654 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:44:26,654 - INFO - Output: 
+2024-12-27 23:44:26,654 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:45:44,488 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:45:44,579 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-27 23:45:47,317 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:45:47,317 - INFO - Output: 
+2024-12-27 23:45:47,317 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:45:47,450 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:45:47,450 - INFO - Output: 
+2024-12-27 23:45:47,450 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:45:47,583 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:45:47,583 - INFO - Output: 
+2024-12-27 23:45:47,583 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:45:47,716 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:45:47,716 - INFO - Output: 
+2024-12-27 23:45:47,716 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:45:47,847 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:45:47,847 - INFO - Output: 
+2024-12-27 23:45:47,847 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:45:47,979 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:45:47,980 - INFO - Output: 
+2024-12-27 23:45:47,980 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:45:48,117 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:45:48,117 - INFO - Output: 
+2024-12-27 23:45:48,117 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-27 23:45:48,245 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-27 23:45:48,245 - INFO - Output: 
+2024-12-27 23:45:48,245 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:00:44,749 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:00:44,849 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:00:47,341 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:00:47,341 - INFO - Output: 
+2024-12-28 00:00:47,341 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:00:47,473 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:00:47,473 - INFO - Output: 
+2024-12-28 00:00:47,473 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:00:47,604 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:00:47,604 - INFO - Output: 
+2024-12-28 00:00:47,605 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:00:47,733 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:00:47,733 - INFO - Output: 
+2024-12-28 00:00:47,733 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:00:47,860 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:00:47,860 - INFO - Output: 
+2024-12-28 00:00:47,860 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:00:47,989 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:00:47,989 - INFO - Output: 
+2024-12-28 00:00:47,989 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:00:48,119 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:00:48,119 - INFO - Output: 
+2024-12-28 00:00:48,119 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:00:48,252 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:00:48,252 - INFO - Output: 
+2024-12-28 00:00:48,252 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:03:52,852 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:03:52,909 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:03:55,134 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:03:55,134 - INFO - Output: 
+2024-12-28 00:03:55,134 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:03:55,263 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:03:55,263 - INFO - Output: 
+2024-12-28 00:03:55,263 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:03:55,394 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:03:55,395 - INFO - Output: 
+2024-12-28 00:03:55,395 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:03:55,529 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:03:55,529 - INFO - Output: 
+2024-12-28 00:03:55,529 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:03:55,660 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:03:55,660 - INFO - Output: 
+2024-12-28 00:03:55,660 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:03:55,796 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:03:55,796 - INFO - Output: 
+2024-12-28 00:03:55,796 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:03:55,929 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:03:55,929 - INFO - Output: 
+2024-12-28 00:03:55,929 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:03:56,056 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:03:56,056 - INFO - Output: 
+2024-12-28 00:03:56,056 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:05:24,629 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:05:24,683 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:05:26,798 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:05:26,798 - INFO - Output: 
+2024-12-28 00:05:26,798 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:05:26,929 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:05:26,929 - INFO - Output: 
+2024-12-28 00:05:26,929 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:05:27,055 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:05:27,055 - INFO - Output: 
+2024-12-28 00:05:27,055 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:05:27,185 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:05:27,185 - INFO - Output: 
+2024-12-28 00:05:27,185 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:05:27,314 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:05:27,314 - INFO - Output: 
+2024-12-28 00:05:27,315 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:05:27,447 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:05:27,447 - INFO - Output: 
+2024-12-28 00:05:27,447 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:05:27,573 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:05:27,573 - INFO - Output: 
+2024-12-28 00:05:27,574 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:05:27,703 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:05:27,703 - INFO - Output: 
+2024-12-28 00:05:27,703 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:08:47,190 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:08:47,308 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:08:49,888 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:08:49,888 - INFO - Output: 
+2024-12-28 00:08:49,888 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:08:50,018 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:08:50,018 - INFO - Output: 
+2024-12-28 00:08:50,018 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:08:50,151 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:08:50,151 - INFO - Output: 
+2024-12-28 00:08:50,151 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:08:50,282 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:08:50,283 - INFO - Output: 
+2024-12-28 00:08:50,283 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:08:50,413 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:08:50,413 - INFO - Output: 
+2024-12-28 00:08:50,413 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:08:50,542 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:08:50,542 - INFO - Output: 
+2024-12-28 00:08:50,542 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:08:50,670 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:08:50,671 - INFO - Output: 
+2024-12-28 00:08:50,671 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:08:50,799 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:08:50,799 - INFO - Output: 
+2024-12-28 00:08:50,799 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:07,696 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:10:07,757 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:10:12,719 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:10:12,719 - INFO - Output: 
+2024-12-28 00:10:12,719 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:12,850 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:10:12,851 - INFO - Output: 
+2024-12-28 00:10:12,851 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:12,983 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:10:12,983 - INFO - Output: 
+2024-12-28 00:10:12,983 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:13,113 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:10:13,113 - INFO - Output: 
+2024-12-28 00:10:13,113 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:13,245 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:10:13,245 - INFO - Output: 
+2024-12-28 00:10:13,245 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:13,379 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:10:13,379 - INFO - Output: 
+2024-12-28 00:10:13,379 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:13,508 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:10:13,509 - INFO - Output: 
+2024-12-28 00:10:13,509 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:13,638 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:10:13,638 - INFO - Output: 
+2024-12-28 00:10:13,638 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:25,339 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:10:25,339 - INFO - Output: 
+2024-12-28 00:10:25,339 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:25,636 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:10:25,636 - INFO - Output: 
+2024-12-28 00:10:25,636 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:27,733 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:10:27,733 - INFO - Output: 
+2024-12-28 00:10:27,733 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:28,696 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:10:28,696 - INFO - Output: 
+2024-12-28 00:10:28,696 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:10:28,908 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:10:28,909 - INFO - Output: 
+2024-12-28 00:10:28,909 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:11:58,504 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:11:58,593 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:12:08,212 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:12:08,212 - INFO - Output: 
+2024-12-28 00:12:08,213 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:08,346 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:12:08,347 - INFO - Output: 
+2024-12-28 00:12:08,347 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:08,481 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:12:08,481 - INFO - Output: 
+2024-12-28 00:12:08,481 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:08,612 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:12:08,613 - INFO - Output: 
+2024-12-28 00:12:08,613 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:08,743 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:12:08,743 - INFO - Output: 
+2024-12-28 00:12:08,743 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:08,869 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:12:08,870 - INFO - Output: 
+2024-12-28 00:12:08,870 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:09,001 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:12:09,002 - INFO - Output: 
+2024-12-28 00:12:09,002 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:09,132 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:12:09,132 - INFO - Output: 
+2024-12-28 00:12:09,133 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:11,837 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:12:11,837 - INFO - Output: 
+2024-12-28 00:12:11,837 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:11,970 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:12:11,970 - INFO - Output: 
+2024-12-28 00:12:11,971 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:12,709 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:12:12,710 - INFO - Output: 
+2024-12-28 00:12:12,710 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:13,081 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:12:13,081 - INFO - Output: 
+2024-12-28 00:12:13,081 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:13,310 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:12:13,310 - INFO - Output: 
+2024-12-28 00:12:13,310 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:13,437 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:12:13,437 - INFO - Output: 
+2024-12-28 00:12:13,437 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:12:13,568 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:12:13,568 - INFO - Output: 
+2024-12-28 00:12:13,568 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:09,171 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:16:47,885 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:16:47,952 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:16:49,899 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:16:49,900 - INFO - Output: 
+2024-12-28 00:16:49,900 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:50,031 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:16:50,031 - INFO - Output: 
+2024-12-28 00:16:50,031 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:50,160 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:16:50,160 - INFO - Output: 
+2024-12-28 00:16:50,160 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:50,291 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:16:50,291 - INFO - Output: 
+2024-12-28 00:16:50,291 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:50,422 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:16:50,422 - INFO - Output: 
+2024-12-28 00:16:50,422 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:50,549 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:16:50,549 - INFO - Output: 
+2024-12-28 00:16:50,549 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:50,681 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:16:50,681 - INFO - Output: 
+2024-12-28 00:16:50,681 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:50,810 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:16:50,810 - INFO - Output: 
+2024-12-28 00:16:50,810 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:53,899 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:16:53,900 - INFO - Output: 
+2024-12-28 00:16:53,900 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:54,033 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:16:54,033 - INFO - Output: 
+2024-12-28 00:16:54,033 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:54,698 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:16:54,698 - INFO - Output: 
+2024-12-28 00:16:54,698 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:55,042 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:16:55,043 - INFO - Output: 
+2024-12-28 00:16:55,043 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:55,312 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:16:55,312 - INFO - Output: 
+2024-12-28 00:16:55,312 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:16:55,511 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:16:55,511 - INFO - Output: 
+2024-12-28 00:16:55,511 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:18:27,724 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:18:27,724 - INFO - Output: 
+2024-12-28 00:18:27,724 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:18:28,187 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:18:28,187 - INFO - Output: 
+2024-12-28 00:18:28,187 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:18:28,425 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:18:28,425 - INFO - Output: 
+2024-12-28 00:18:28,425 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:18:28,777 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:18:28,778 - INFO - Output: 
+2024-12-28 00:18:28,778 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:18:29,166 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:18:29,166 - INFO - Output: 
+2024-12-28 00:18:29,166 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:18:30,065 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:18:30,065 - INFO - Output: 
+2024-12-28 00:18:30,065 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:18:30,312 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:18:30,312 - INFO - Output: 
+2024-12-28 00:18:30,312 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:18:32,288 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:18:32,289 - INFO - Output: 
+2024-12-28 00:18:32,289 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:19:25,202 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:19:25,294 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:19:57,134 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:19:57,233 - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-28 00:20:04,052 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:20:04,053 - INFO - Output: 
+2024-12-28 00:20:04,053 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:04,185 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:20:04,185 - INFO - Output: 
+2024-12-28 00:20:04,185 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:04,317 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:20:04,317 - INFO - Output: 
+2024-12-28 00:20:04,317 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:04,447 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:20:04,448 - INFO - Output: 
+2024-12-28 00:20:04,448 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:04,576 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:20:04,576 - INFO - Output: 
+2024-12-28 00:20:04,576 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:04,706 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:20:04,707 - INFO - Output: 
+2024-12-28 00:20:04,707 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:04,833 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:20:04,833 - INFO - Output: 
+2024-12-28 00:20:04,833 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:04,959 - INFO - Docker Sandbox Execution: usb_device input executed.
+2024-12-28 00:20:04,959 - INFO - Output: 
+2024-12-28 00:20:04,959 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:08,947 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:08,948 - INFO - Output: 
+2024-12-28 00:20:08,948 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:09,154 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:09,154 - INFO - Output: 
+2024-12-28 00:20:09,154 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:09,667 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:09,667 - INFO - Output: 
+2024-12-28 00:20:09,667 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:10,119 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:10,119 - INFO - Output: 
+2024-12-28 00:20:10,120 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:10,377 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:10,377 - INFO - Output: 
+2024-12-28 00:20:10,378 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:10,765 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:10,766 - INFO - Output: 
+2024-12-28 00:20:10,766 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:14,959 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:14,959 - INFO - Output: 
+2024-12-28 00:20:14,959 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:15,143 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:15,143 - INFO - Output: 
+2024-12-28 00:20:15,143 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:15,478 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:15,478 - INFO - Output: 
+2024-12-28 00:20:15,478 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:15,666 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:15,666 - INFO - Output: 
+2024-12-28 00:20:15,666 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:15,801 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:15,801 - INFO - Output: 
+2024-12-28 00:20:15,801 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:16,425 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:16,426 - INFO - Output: 
+2024-12-28 00:20:16,426 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:16,599 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:16,599 - INFO - Output: 
+2024-12-28 00:20:16,599 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:16,767 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:16,767 - INFO - Output: 
+2024-12-28 00:20:16,767 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:17,066 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:17,066 - INFO - Output: 
+2024-12-28 00:20:17,066 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
+2024-12-28 00:20:17,222 - INFO - Docker Sandbox Execution: keystroke input executed.
+2024-12-28 00:20:17,222 - INFO - Output: 
+2024-12-28 00:20:17,222 - INFO - Errors: docker: Cannot connect to the Docker daemon at unix:///home/ericcaptain22/.docker/desktop/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+
