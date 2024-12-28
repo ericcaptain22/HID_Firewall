@@ -3,7 +3,9 @@ from tkinter import scrolledtext, Toplevel, Label, Button
 import threading
 from pynput import keyboard
 import re
+from tkinter import messagebox, scrolledtext, filedialog
 import pickle
+import threading
 from scripts import sandbox_analysis
 from scripts import enforcer
 from scripts import device_detection
@@ -14,7 +16,7 @@ from tensorflow.keras.models import load_model
 from models.train_payload_model import pad_sequences, read_file_content
 from scripts.malicious_input_engine import load_payload_model_rf, analyze_keystroke_partial
 from scripts.malicious_input_engine import analyze_keystroke, load_keystroke_model, analyze_keystroke, load_payload_model_lstm, preprocess_content
-from scripts.keystroke_interception import preprocess_command, keystroke_vectorizer, keystroke_clf
+from scripts.keystroke_interception import preprocess_command, keystroke_vectorizer, keystroke_clf, analyze_command_ngrams
 from scripts.sandbox_analysis import analyze_keystroke_sandbox, analyze_usb_device_sandbox
 # Malicious patterns
 MALICIOUS_PATTERNS = [
@@ -114,7 +116,7 @@ class HIDFirewallApp:
     def __init__(self, root):
         self.root = root
         self.root.title("HID Firewall")
-        self.root.geometry("800x700")
+        self.root.geometry("1000x1200")
         self.root.configure(bg="#282c34")
 
         self.style = {
@@ -133,7 +135,33 @@ class HIDFirewallApp:
         self.rf_vectorizer, self.rf_clf = load_payload_model_rf()  # Load Random Forest model
         self.lstm_model = load_model('models/lstm_payload_model.h5')  # Load LSTM model
         with open('models/tokenizer.pkl', 'rb') as tokenizer_file:
-            self.lstm_tokenizer = pickle.load(tokenizer_file)    
+            self.lstm_tokenizer = pickle.load(tokenizer_file)   
+
+        
+        # Manual Input Frame
+        self.input_frame = tk.LabelFrame(self.root, text="Manual Command Input", 
+                                         font=self.style["font"], bg=self.style["highlight_bg"], fg=self.style["fg"])
+        self.input_frame.pack(fill="both", expand="yes", padx=10, pady=10)
+
+        self.input_textarea = scrolledtext.ScrolledText(self.input_frame, height=6, font=self.style["font"], bg="white", fg="black")
+        self.input_textarea.pack(fill="both", expand="yes", padx=10, pady=10)
+
+        self.analyze_button = tk.Button(self.input_frame, text="Analyze Input", command=self.analyze_manual_input,
+                                        font=self.style["font"], bg=self.style["button_bg"], fg=self.style["button_fg"])
+        self.analyze_button.pack(pady=5)
+
+        # File Upload Frame
+        self.file_frame = tk.LabelFrame(self.root, text="Upload Log File for Analysis", 
+                                        font=self.style["font"], bg=self.style["highlight_bg"], fg=self.style["fg"])
+        self.file_frame.pack(fill="both", expand="yes", padx=10, pady=10)
+
+        self.upload_button = tk.Button(self.file_frame, text="Upload File", command=self.upload_file,
+                                       font=self.style["font"], bg=self.style["button_bg"], fg=self.style["button_fg"])
+        self.upload_button.pack(pady=5)
+
+        self.file_results = scrolledtext.ScrolledText(self.file_frame, height=5, font=self.style["font"], bg="white", fg="black", state='disabled')
+        self.file_results.pack(fill="both", expand="yes", padx=10, pady=10)
+
 
 
         # USB Devices Frame
@@ -153,7 +181,7 @@ class HIDFirewallApp:
                                              font=self.style["font"], bg=self.style["highlight_bg"], fg=self.style["fg"])
         self.keystroke_frame.pack(fill="both", expand="yes", padx=10, pady=10)
 
-        self.keystroke_list = scrolledtext.ScrolledText(self.keystroke_frame, height=12, font=self.style["font"], bg="white", fg="black")
+        self.keystroke_list = scrolledtext.ScrolledText(self.keystroke_frame, height=7, font=self.style["font"], bg="white", fg="black")
         self.keystroke_list.pack(fill="both", expand="yes", padx=10, pady=10)
 
         self.keystroke_list.tag_configure("highlight", foreground="#ff9900", font=("Helvetica", 20, "bold"))
@@ -192,7 +220,50 @@ class HIDFirewallApp:
         if sandbox_result['status'] == 'malicious':
             self.usb_list.insert(tk.END, f"Sandbox Alert: {sandbox_result['details']}\n", "highlight")
 
+    def analyze_manual_input(self):
+        """Analyze commands typed manually in the textarea."""
+        input_text = self.input_textarea.get("1.0", tk.END).strip()
+        if not input_text:
+            self.show_custom_alert("Input Error", "Please enter a command or text for analysis.")
+            return
+        
+        # Encrypt and analyze each line
+        results = []
+        for line in input_text.splitlines():
+            encrypted = encrypt_message(line)
+            decrypted = decrypt_message(encrypted)
+            if analyze_command_ngrams(decrypted):
+                results.append(f"Malicious: {line}")
+            else:
+                results.append(f"Benign: {line}")
+        
+        self.show_custom_alert("Analysis Results", "\n".join(results), "warning")
 
+    def upload_file(self):
+        """Upload a .txt file and analyze its contents."""
+        file_path = filedialog.askopenfilename(filetypes=[("Text Files", "*.txt")])
+        if not file_path:
+            return
+
+        try:
+            with open(file_path, 'r') as file:
+                lines = file.readlines()
+            
+            self.file_results.config(state='normal')
+            self.file_results.delete("1.0", tk.END)
+
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+                if analyze_command_ngrams(line):
+                    self.file_results.insert(tk.END, f"Malicious: {line}\n", "highlight")
+                else:
+                    self.file_results.insert(tk.END, f"Benign: {line}\n")
+            
+            self.file_results.config(state='disabled')
+        except Exception as e:
+            messagebox.showerror("File Error", f"Error reading the file: {e}")
 
     def read_usb_contents(self, device):
         # Implement your own method to read contents from the USB device
