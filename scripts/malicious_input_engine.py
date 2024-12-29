@@ -138,6 +138,26 @@ def analyze_keystroke_partial(command, vectorizer, clf):
         print("Benign")
     return is_malicious
 
+
+def load_kaggle_model():
+    """Load the Random Forest model trained on the Kaggle dataset."""
+    model_path = os.path.join('models', 'kaggle_payload_model.pkl')
+    with open(model_path, 'rb') as model_file:
+        model = pickle.load(model_file)
+    return model
+
+def analyze_kaggle_payload(features, model):
+    """
+    Analyze features from a payload using the Kaggle-trained model.
+    Parameters:
+        features (array): Feature vector extracted from a file.
+        model: Trained Random Forest model.
+    Returns:
+        bool: True if malicious, False otherwise.
+    """
+    prediction = model.predict([features])
+    return prediction[0] == 1
+
 # Example usage
 if __name__ == "__main__":
     # Load models

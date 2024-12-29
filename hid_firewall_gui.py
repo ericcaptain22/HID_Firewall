@@ -4,6 +4,7 @@ import threading
 from pynput import keyboard
 import re
 from tkinter import messagebox, scrolledtext, filedialog
+from tkinter.filedialog import askopenfilename
 import pickle
 import threading
 from scripts import sandbox_analysis
@@ -14,10 +15,11 @@ from scripts.encryption import encrypt_message, decrypt_message  # Import encryp
 #from tensorflow.keras.models import load_model
 from tensorflow.keras.models import load_model
 from models.train_payload_model import pad_sequences, read_file_content
-from scripts.malicious_input_engine import load_payload_model_rf, analyze_keystroke_partial
+from scripts.malicious_input_engine import load_payload_model_rf, analyze_keystroke_partial, load_kaggle_model, analyze_kaggle_payload
 from scripts.malicious_input_engine import analyze_keystroke, load_keystroke_model, analyze_keystroke, load_payload_model_lstm, preprocess_content
 from scripts.keystroke_interception import preprocess_command, keystroke_vectorizer, keystroke_clf, analyze_command_ngrams
 from scripts.sandbox_analysis import analyze_keystroke_sandbox, analyze_usb_device_sandbox
+from models.train_kaggle_model import load_and_preprocess_kaggle_dataset
 # Malicious patterns
 MALICIOUS_PATTERNS = [
     re.compile(r'echo\s+bad', re.IGNORECASE),
@@ -111,7 +113,6 @@ def analyze_file_with_rf(self, filepath):
         return False
 
 
-
 class HIDFirewallApp:
     def __init__(self, root):
         self.root = root
@@ -127,7 +128,9 @@ class HIDFirewallApp:
             "button_bg": "#61dafb",
             "button_fg": "#20232a"
         }
-        
+       
+
+
         #Load trained models
         self.keystroke_vectorizer, self.keystroke_clf = load_keystroke_model()
         self.payload_vectorizer, self.payload_clf = load_payload_model_lstm()
@@ -162,6 +165,9 @@ class HIDFirewallApp:
         self.file_results = scrolledtext.ScrolledText(self.file_frame, height=5, font=self.style["font"], bg="white", fg="black", state='disabled')
         self.file_results.pack(fill="both", expand="yes", padx=10, pady=10)
 
+        # Ensure control_frame is initialized early
+        self.control_frame = tk.Frame(self.root, bg=self.style["bg"])
+        self.control_frame.pack(fill="both", expand="yes", padx=10, pady=10)
 
 
         # USB Devices Frame
@@ -201,6 +207,20 @@ class HIDFirewallApp:
         self.running = False
         self.listener = None
 
+   
+        """self.file_upload_frame = tk.LabelFrame(self.root, text="Analyze Kaggle Dataset", bg=self.style["highlight_bg"], fg=self.style["fg"], font=self.style["font"])
+        self.file_upload_frame.pack(fill="both", expand="yes", padx=10, pady=10)
+
+        self.file_upload_button = tk.Button(
+                self.file_upload_frame,
+                text="Browse and Analyze File",
+                command=self.browse_and_analyze_kaggle_file,
+                font=self.style["font"],
+                bg=self.style["button_bg"],
+                fg=self.style["button_fg"]
+            )
+        self.file_upload_button.pack(pady=10)"""
+
     def list_usb_devices(self):
         devices = device_detection.detect_usb_devices()
         self.device_analysis_results = []  # Store analysis results
@@ -237,7 +257,7 @@ class HIDFirewallApp:
             else:
                 results.append(f"Benign: {line}")
         
-        self.show_custom_alert("Analysis Results", "\n".join(results), "warning")
+        self.show_custom_alert("Analysis Results", "\n".join(results), "info")
 
     def upload_file(self):
         """Upload a .txt file and analyze its contents."""
@@ -343,6 +363,90 @@ class HIDFirewallApp:
 
         ok_button = Button(alert, text="OK", command=alert.destroy, font=self.style["font"], bg=self.style["button_bg"], fg=self.style["button_fg"])
         ok_button.pack(pady=10)
+    
+    
+    def browse_and_analyze_kaggle_file(self):
+        """
+        Browse and select a file, then analyze it as a Kaggle dataset.
+        """
+        file_path = filedialog.askopenfilename(
+            title="Select Kaggle Dataset File",
+            filetypes=(("Excel Files", "*.xls;*.xlsx"), ("CSV Files", "*.csv"), ("All Files", "*.*"))
+        )
+        if file_path:
+            self.analyze_kaggle_file(file_path)
+    
+    
+    def analyze_kaggle_file(self, file_path):
+        """
+        Analyze a Kaggle dataset file for malicious patterns.
+        """
+        try:
+            if file_path.endswith((".csv", ".xls")):
+
+                from models.train_kaggle_model import load_and_preprocess_kaggle_dataset, train_kaggle_model
+
+                # Load and preprocess the dataset
+                X, y = load_and_preprocess_kaggle_dataset(file_path)
+                
+                # Predict and analyze
+                predictions = self.kaggle_model.predict(X)
+                malicious_count = sum(predictions)
+                total_files = len(predictions)
+
+                # Show results in a popup
+                result_text = (
+                    f"Analyzed {total_files} files.\n"
+                    f"Malicious files detected: {malicious_count}\n"
+                    f"Benign files detected: {total_files - malicious_count}"
+                )
+                self.show_custom_alert("Kaggle File Analysis", result_text, "info")
+            elif file_path.endswith(".txt"):
+                # Handle unstructured text files
+                with open(file_path, "r") as file:
+                    lines = file.readlines()
+
+                malicious_lines = []
+                for line in lines:
+                    line = line.strip()
+                    if self.is_line_malicious(line):
+                        malicious_lines.append(line)
+
+                # Show results in a popup
+                total_lines = len(lines)
+                malicious_count = len(malicious_lines)
+                result_text = (
+                    f"Analyzed {total_lines} lines.\n"
+                    f"Malicious lines detected: {malicious_count}\n"
+                    f"Benign lines detected: {total_lines - malicious_count}"
+                )
+                self.show_custom_alert("Text File Analysis", result_text, "info")
+
+            else:
+            # Unsupported file type
+                self.show_custom_alert("Error", "Unsupported file type. Please upload a .csv, .xls, .xlsx, or .txt file.", "error")
+
+        except Exception as e:
+            self.show_custom_alert("Error", f"Failed to analyze file: {e}", "error")
+
+            
+    def is_line_malicious(self, line):
+        """
+        Analyze a single line of text for malicious patterns.
+        """
+        # Preprocess the line
+        processed_line = preprocess_content(line)
+        
+        # Analyze using Kaggle-trained model
+        try:
+            # Convert the line into a feature vector
+            vector = self.kaggle_scaler.transform([processed_line])  # Ensure appropriate preprocessing
+            prediction = self.kaggle_model.predict(vector)
+            return prediction[0] == 1  # Malicious if label == 1
+        except Exception as e:
+            print(f"Error analyzing line: {e}")
+            return False
+
 
 
 if __name__ == "__main__":
