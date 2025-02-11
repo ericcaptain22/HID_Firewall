@@ -8,51 +8,62 @@ import subprocess
 def block_input(duration):
     """
     Block all user input for a specified duration.
-    This function uses ctypes to call the BlockInput function from the user32.dll on Windows.
+    Currently implemented for Windows. On Linux and macOS, it logs a message.
     """
-    if platform.system() == "Windows":
+    os_type = platform.system()
+    if os_type == "Windows":
         ctypes.windll.user32.BlockInput(True)
         time.sleep(duration)
         ctypes.windll.user32.BlockInput(False)
+    elif os_type == "Linux":
+        print(f"Blocking input is not directly supported on Linux. Simulating blocking for {duration} seconds.")
+        time.sleep(duration)  # Simulate blocking
+    elif os_type == "Darwin":  # macOS
+        print(f"Blocking input is not directly supported on macOS. Simulating blocking for {duration} seconds.")
+        time.sleep(duration)  # Simulate blocking
     else:
-        raise NotImplementedError("Input blocking is not implemented for this operating system")
+        raise NotImplementedError(f"Input blocking is not implemented for {os_type}")
 
 def disconnect_device(device):
     """
     Disconnect a specified USB device.
-    This function is currently a placeholder as disconnecting a device programmatically can be complex and OS-dependent.
+    Currently implemented as a placeholder.
     """
-    # Placeholder for actual device disconnection code
-    # You will need platform-specific code to safely disconnect a USB device
-    print(f"Disconnecting device: {device}")
+    print(f"Simulating disconnection of device: {device}")
+    # Add actual disconnection logic if feasible for your platform.
 
 def lock_system():
     """
     Lock the operating system.
-    This function calls OS-specific commands to lock the system.
     """
-    if platform.system() == "Windows":
+    os_type = platform.system()
+    if os_type == "Windows":
         ctypes.windll.user32.LockWorkStation()
-    elif platform.system() == "Linux":
-        subprocess.call(["gnome-screensaver-command", "--lock"])
-    elif platform.system() == "Darwin":
+    elif os_type == "Linux":
+        try:
+            subprocess.call(["gnome-screensaver-command", "--lock"])
+        except FileNotFoundError:
+            print("Gnome screensaver not available. Unable to lock the system.")
+    elif os_type == "Darwin":  # macOS
         subprocess.call(['/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession', '-suspend'])
     else:
-        raise NotImplementedError("System locking is not implemented for this operating system")
+        raise NotImplementedError(f"System locking is not implemented for {os_type}")
 
 def enforce_security(action, duration=None, device=None):
     """
     Enforce security measures based on the specified action.
-    Actions can be "block_input", "disconnect_device", or "lock_system".
     """
-    if action == "block_input" and duration:
-        block_input(duration)
-    elif action == "disconnect_device" and device:
-        disconnect_device(device)
-    elif action == "lock_system":
-        lock_system()
-    else:
-        raise ValueError("Invalid action or missing parameters")
+    try:
+        if action == "block_input" and duration:
+            block_input(duration)
+        elif action == "disconnect_device" and device:
+            disconnect_device(device)
+        elif action == "lock_system":
+            lock_system()
+        else:
+            raise ValueError("Invalid action or missing parameters")
+    except Exception as e:
+        print(f"Failed to enforce security action '{action}': {e}")
 
 if __name__ == "__main__":
     # Example usage
