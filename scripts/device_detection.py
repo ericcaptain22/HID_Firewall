@@ -1,56 +1,96 @@
-import subprocess
+# File: scripts/device_detection.py
+
 import platform
+import subprocess
 import os
-import re
+import psutil
 
 def detect_usb_devices():
     """
     Detect USB devices based on the operating system.
     """
-    
     os_type = platform.system()
+    devices = []
+
     try:
         if os_type == 'Linux':
-            # Linux: use lsusb to list USB devices
             result = subprocess.run(['lsusb'], capture_output=True, text=True)
-            devices = result.stdout.strip().split('\n')
-            return [device for device in devices if device]
+            devices = result.stdout.split('\n')
+            devices = [device for device in devices if device]
+
         elif os_type == 'Windows':
-            # Windows: Use PowerShell command to list USB devices
-            result = subprocess.run(['powershell', 'Get-PnpDevice -Class USB'], capture_output=True, text=True, shell=True)
-            devices = result.stdout.strip().split('\n')
-            return [device for device in devices if device]
+            # Use Windows command to list USB devices
+            result = subprocess.run(
+                ['wmic', 'path', 'Win32_PnPEntity', 'where', "DeviceID like '%USB%'", 'get', 'DeviceID,Name'],
+                capture_output=True, text=True
+            )
+            devices = result.stdout.split('\n')
+            devices = [device.strip() for device in devices if device.strip() and 'DeviceID' not in device]
+
         elif os_type == 'Darwin':  # macOS
-            # macOS: Use system_profiler command to list USB devices
             result = subprocess.run(['system_profiler', 'SPUSBDataType'], capture_output=True, text=True)
-            devices = result.stdout.strip().split('\n')
-            return [device for device in devices if device]
+            devices = result.stdout.split('\n')
+            devices = [device for device in devices if device]
+
         else:
             print(f"USB detection not implemented for {os_type}")
             return []
+
     except Exception as e:
         print(f"Error detecting USB devices: {e}")
         return []
 
+    return devices
+
+
 def get_storage_devices():
     """
-    Retrieve the list of mounted USB storage devices.
+    Retrieve mounted storage devices compatible with both Windows and Linux.
     """
     storage_devices = []
+
+    os_type = platform.system()
+
     try:
-        result = subprocess.run(['lsblk', '-o', 'NAME,MOUNTPOINT,VENDOR,MODEL'], capture_output=True, text=True)
-        lines = result.stdout.strip().split('\n')[1:]  # Skip the header line
-        for line in lines:
-            parts = re.split(r'\s{2,}', line)  # Split by two or more spaces
-            if len(parts) >= 2 and parts[1]:  # Ensure there's a mount point
-                storage_devices.append((parts[0], parts[1]))  # (Device name, Mount point)
+        if os_type == 'Linux':
+            result = subprocess.run(['lsblk', '-o',
+'NAME,MOUNTPOINT'], capture_output=True, text=True)
+            lines = result.stdout.splitlines()[1:]  # Skip header
+
+            for line in lines:
+                parts = line.split()
+                if len(parts) == 2:
+                    dev_name = parts[0]
+                    mount_point = parts[1]
+                    storage_devices.append((dev_name, mount_point))
+
+        elif os_type == 'Windows':
+            # Use WMIC command to get mounted volumes on Windows
+            result = subprocess.run(['wmic', 'logicaldisk', 'get',
+'DeviceID,VolumeName'], capture_output=True, text=True)
+            lines = result.stdout.splitlines()[1:]  # Skip header
+
+            for line in lines:
+                if line.strip():
+                    parts = line.split()
+                    if len(parts) >= 1:
+                        dev_name = parts[0]
+                        mount_point = dev_name  # On Windows, the DeviceID is the mount point
+                        storage_devices.append((dev_name, mount_point))
+
+        else:
+            print(f"Storage retrieval not implemented for {os_type}")
+            return []
+
     except Exception as e:
         print(f"Error retrieving storage devices: {e}")
+
     return storage_devices
+
 
 def scan_usb_for_malicious_content(mount_point):
     """
-    Scan USB devices for malicious content by searching for specific keywords in files.
+    Scan USB devices for malicious content.
     """
     malicious_files = []
     try:
@@ -60,68 +100,69 @@ def scan_usb_for_malicious_content(mount_point):
                 try:
                     with open(file_path, 'r', errors='ignore') as f:
                         content = f.read()
-                        if "malicious_keyword" in content:  # Replace with actual keywords or patterns
+
+                        # Check for malicious patterns (replace with actual patterns)
+                        if "malicious" in content or ".ps1" in file or ".exe" in file:
                             malicious_files.append(file_path)
+
                 except Exception as e:
                     print(f"Error reading file {file_path}: {e}")
+
     except Exception as e:
         print(f"Error scanning USB content at {mount_point}: {e}")
+
     return malicious_files
+
 
 def list_usb_devices(devices):
     """
-    List details of detected USB devices and scan for malicious content if possible.
+    List details of detected USB devices and scan for malicious
+content if possible.
     """
     storage_devices = get_storage_devices()  # Get mounted storage devices
-    device_list = []  # Store device details for GUI display
+    device_list = []
 
     for device in devices:
-        if "ID" in device:
-            details = device.split()
-            device_id = details[5] if len(details) > 5 else "Unknown"
-            device_entry = {"device_id": device_id, "details": device, "status": "Unknown"}
+        device_info = device.strip().split(',')
+        device_id = device_info[0].strip() if len(device_info) > 0 else "Unknown"
+        device_name = device_info[1].strip() if len(device_info) > 1 else "Unknown"
 
-            # Match device with a mount point
-            matched_mount_point = None
-            for dev_name, mount_point in storage_devices:
-                if device_id.split(":")[0] in dev_name:  # Match by vendor ID
-                    matched_mount_point = mount_point
-                    break
+        print(f"🛡️ Device ID: {device_id}, Name: {device_name}")
 
-            if matched_mount_point:
-                device_entry["status"] = f"Mounted at {matched_mount_point}"
-                device_entry["mount_point"] = matched_mount_point
+        # Match device with a mount point
+        matched_mount_point = None
+        for dev_name, mount_point in storage_devices:
+            if device_id in dev_name:
+                matched_mount_point = mount_point
+                break
 
-                # Scan for malicious content
-                malicious_files = scan_usb_for_malicious_content(matched_mount_point)
-                if malicious_files:
-                    device_entry["malicious_files"] = malicious_files
-                    device_entry["malicious_status"] = "Malicious files detected"
-                else:
-                    device_entry["malicious_files"] = []
-                    device_entry["malicious_status"] = "No malicious files detected"
+        if matched_mount_point:
+            print(f"📍 Scanning device {device_id} at mount point {matched_mount_point}...")
+
+            # Scan for malicious content
+            malicious_files = scan_usb_for_malicious_content(matched_mount_point)
+
+            if malicious_files:
+                print(f"🚫 Malicious files detected on {device_id}:")
+                for file in malicious_files:
+                    print(f"  - {file}")
             else:
-                device_entry["status"] = "No mount point found"
+                print(f"✅ No malicious files detected on {device_id}.")
 
-            device_list.append(device_entry)
+        else:
+            print(f"⚠️ No mount point found for device {device_id}.")
+
+        device_list.append(f"Device ID: {device_id}, Name: {device_name}")
 
     return device_list
 
 
 if __name__ == "__main__":
     devices = detect_usb_devices()
-    if devices:
-        print("Detected USB Devices:")
-        for device_info in list_usb_devices(devices):
-            print(f"Device ID: {device_info['device_id']}")
-            print(f"Details: {device_info['details']}")
-            print(f"Status: {device_info['status']}")
-            if "mount_point" in device_info:
-                print(f"Mount Point: {device_info['mount_point']}")
-                print(f"Malicious Status: {device_info['malicious_status']}")
-                for malicious_file in device_info["malicious_files"]:
-                    print(f"  - {malicious_file}")
-            print()
-    else:
-        print("No USB devices detected.")
 
+    if devices:
+        print("🔍 Detected USB Devices:")
+        for device in list_usb_devices(devices):
+            print(device)
+    else:
+        print("⚠️ No USB devices detected.")

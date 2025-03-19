@@ -4,3 +4,5 @@ pycryptodome==3.10.1
 cryptography
 scikit-learn
 pandas
+tensorflow
+psutil
