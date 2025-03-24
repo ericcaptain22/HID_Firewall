@@ -5,164 +5,219 @@ import time
 import platform
 import subprocess
 import psutil
+import threading
+#import winreg
+from ctypes import wintypes
 
-def block_input(duration):
-    """
-    Block all user input for a specified duration.
-    """
-    os_type = platform.system()
+# Import winreg only if on Windows
+if platform.system() == "Windows":
+    import winreg  # Windows-only module
+else:
+    winreg = None  # Assign None on Linux to avoid errors
 
-    if os_type == "Windows":
-        ctypes.windll.user32.BlockInput(True)
-        time.sleep(duration)
-        ctypes.windll.user32.BlockInput(False)
+# ===========================
+# 🔥 Constants for API Hooking
+# ===========================
+WH_KEYBOARD_LL = 13
+WM_KEYDOWN = 0x0100
+WM_KEYUP = 0x0101
+VK_LWIN = 0x5B  # Windows key
+VK_R = 0x52     # R key
+PROCESS_TERMINATE = 0x0001
 
-    elif os_type == "Linux":
+key_hook_active = False
+
+
+# ✅ Whitelisted processes (preserved)
+WHITELIST_PROCESSES = {
+    "python.exe", "svchost.exe", "taskmgr.exe", "explorer.exe", "powershell.exe"
+}
+
+# ===========================
+# 🚫 Kernel-Level Key Hook (Instant Block)
+# ===========================
+def low_level_keyboard_proc(nCode, wParam, lParam):
+    """Kernel hook to block Win + R instantly."""
+    if nCode >= 0 and wParam in (WM_KEYDOWN, WM_KEYUP):
+        vk_code = ctypes.cast(lParam, ctypes.POINTER(ctypes.c_ulong)).contents.value
+
+        # 🚫 Instantly block Win + R combination
+        if vk_code == VK_LWIN or vk_code == VK_R:
+            print("🚫 Instantly blocking Win + R!")
+            return 1  # Block the key event
+
+    return ctypes.windll.user32.CallNextHookEx(None, nCode, wParam, lParam)
+
+
+def block_win_r_combination():
+    """Activate kernel-level key blocking."""
+    global key_hook_active
+
+    if platform.system() == "Windows" and not key_hook_active:
+        print("🚫 Activating low-level key hook to block Win + R...")
+
+        hook_proc = ctypes.WINFUNCTYPE(ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_void_p)(low_level_keyboard_proc)
+
+        hook_id = ctypes.windll.user32.SetWindowsHookExA(
+            WH_KEYBOARD_LL, hook_proc, ctypes.windll.kernel32.GetModuleHandleW(None), 0)
+
+        if hook_id:
+            key_hook_active = True
+            print("✅ Kernel-level key hook activated successfully.")
+
+            # Keep the hook running
+            msg = ctypes.wintypes.MSG()
+            while ctypes.windll.user32.GetMessageW(ctypes.byref(msg), 0, 0, 0) != 0:
+                ctypes.windll.user32.TranslateMessage(ctypes.byref(msg))
+                ctypes.windll.user32.DispatchMessageW(ctypes.byref(msg))
+        else:
+            print("⚠️ Failed to activate key hook!")
+
+
+# ===========================
+# 🚫 Registry Protection
+# ===========================
+def disable_win_r_registry():
+    """Block Win + R via Windows Registry."""
+    if platform.system() == "Windows":
         try:
-            result = subprocess.run(['xinput', 'list'],
-capture_output=True, text=True)
-            for line in result.stdout.splitlines():
-                if "keyboard" in line.lower():
-                    device_id = line.split()[5].split('=')[1]
-                    subprocess.run(['xinput', 'disable', device_id])
-                    time.sleep(duration)
-                    subprocess.run(['xinput', 'enable', device_id])
+            print("🚫 Disabling Win + R via Registry...")
+
+            with winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER) as reg:
+                with winreg.CreateKey(reg, r"Software\Microsoft\Windows\CurrentVersion\Policies\Explorer") as key:
+                    winreg.SetValueEx(key, "NoRun", 0, winreg.REG_DWORD, 1)
+
+            print("✅ Win + R disabled successfully.")
         except Exception as e:
-            print(f"⚠️ Error blocking input on Linux: {e}")
-    else:
-        print(f"⚠️ Input blocking not supported on {os_type}")
+            print(f"⚠️ Error disabling Win + R: {e}")
 
 
-def lock_system():
-    """
-    Lock the operating system.
-    """
-    os_type = platform.system()
+def enable_win_r_registry():
+    """Restore Win + R via Registry."""
+    if platform.system() == "Windows":
+        try:
+            print("🔓 Restoring Win + R via registry...")
 
-    if os_type == "Windows":
-        ctypes.windll.user32.LockWorkStation()
+            with winreg.ConnectRegistry(None, winreg.HKEY_CURRENT_USER) as reg:
+                with winreg.OpenKey(reg, r"Software\Microsoft\Windows\CurrentVersion\Policies\Explorer", 0, winreg.KEY_ALL_ACCESS) as key:
+                    winreg.DeleteValue(key, "NoRun")
 
-    elif os_type == "Linux":
-        subprocess.call(["gnome-screensaver-command", "--lock"])
-
-    elif os_type == "Darwin":  # macOS
-        subprocess.call(['/System/Library/CoreServices/MenuExtras/User.menu/Contents/Resources/CGSession', '-suspend'])
-
-    else:
-        print(f"⚠️ System locking not supported on {os_type}")
+            print("✅ Win + R restored.")
+        except Exception as e:
+            print(f"⚠️ Error restoring Win + R: {e}")
 
 
+# ===========================
+# 🚫 Real-Time Suspicious Process Killer
+# ===========================
 def terminate_suspicious_processes():
-    """
-    Terminate suspicious processes.
-    """
+    """Instantly terminate suspicious processes while respecting the whitelist."""
     suspicious_processes = {
-        "cmd.exe", "wscript.exe", "cscript.exe", "explorer.exe", "chrome.exe",
-        "mshta.exe", "regsvr32.exe", "rundll32.exe", "schtasks.exe",
+        "chrome.exe", "cmd.exe", "wscript.exe", "cscript.exe",
+        "mshta.exe", "rundll32.exe", "regsvr32.exe", "schtasks.exe",
         "wmic.exe", "bitsadmin.exe", "msiexec.exe"
     }
 
-    whitelist = {
-        "firefox.exe", "taskmgr.exe",
-        "python.exe", "svchost.exe", "dllhost.exe", "powershell.exe"
-    }
-
-    for proc in psutil.process_iter(['pid', 'name', 'exe']):
+    for proc in psutil.process_iter(['pid', 'name']):
         try:
             process_name = proc.info['name'].lower()
 
-            if process_name.endswith('.exe'):
-                if process_name in whitelist:
-                    print(f"✅ Skipping whitelisted process: {process_name}")
-                    continue
+            # Skip whitelisted processes
+            if process_name in WHITELIST_PROCESSES:
+                print(f"✅ Skipping whitelisted process: {process_name}")
+                continue
 
-                if process_name in suspicious_processes:
-                    print(f"🚫 Terminating suspicious process: {process_name}")
-                    proc.terminate()
+            # 🚫 Instantly terminate suspicious processes
+            if process_name in suspicious_processes:
+                print(f"🚫 Instantly terminating: {process_name}")
+                proc.terminate()
 
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             continue
 
 
-def disconnect_device():
-    """
-    Disconnect USB device (Windows only) using PowerShell.
-    """
-    os_type = platform.system()
-
-    if os_type == "Windows":
+# ===========================
+# 🔌 USB Watchdog (Instant Execution)
+# ===========================
+def disconnect_usb_devices():
+    """Instantly disconnect USB devices when malicious activity is detected."""
+    if platform.system() == "Windows":
         print("🔌 Disconnecting USB device...")
         try:
-            # Use Get-PnpDevice to list and disable USB devices
             disconnect_command = [
                 'powershell',
                 '-Command',
                 (
                     "Get-PnpDevice -Class USB -Status OK | "
                     "Where-Object { $_.FriendlyName -match 'USB' } | "
-                    "ForEach-Object { Disable-PnpDevice -InstanceId$_.InstanceId -Confirm:$false }"
+                    "ForEach-Object { Disable-PnpDevice -InstanceId $_.InstanceId -Confirm:$false }"
                 )
             ]
 
-            result = subprocess.run(disconnect_command, check=True,
-capture_output=True, text=True)
+            result = subprocess.run(disconnect_command, check=True, capture_output=True, text=True)
 
             if result.returncode == 0:
                 print("✅ USB device disconnected successfully.")
             else:
-                print(f"⚠️ Failed to disconnect USB device: {result.stderr}")
+                print(f"⚠️ Failed to disconnect USB: {result.stderr}")
 
         except Exception as e:
             print(f"⚠️ Error disconnecting USB: {e}")
 
-    else:
-        print(f"⚠️ USB disconnection is not supported on {os_type}")
 
-
-
+# ===========================
+# 🚫 Enforce Security Actions (Instant)
+# ===========================
 def enforce_security(action, duration=None):
-    """
-    Enforce security measures based on the specified action.
-    Actions: "block_input", "terminate_processes", "lock_system",
-"disconnect_device".
-    """
+    """Enforce security measures instantly without looping."""
     try:
         if action == "block_input" and duration:
-            print("🚫 Blocking input...")
-            block_input(duration)
+            print("🚫 Instantly blocking input...")
+            ctypes.windll.user32.BlockInput(True)
+            time.sleep(duration)
+            ctypes.windll.user32.BlockInput(False)
 
         elif action == "terminate_processes":
-            print("🚫 Terminating suspicious processes...")
+            print("🚫 Instantly terminating suspicious processes...")
             terminate_suspicious_processes()
 
-        elif action == "lock_system":
-            print("🔒 Locking system...")
-            lock_system()
+        elif action == "disable_win_r":
+            print("🚫 Disabling Win + R...")
+            disable_win_r_registry()
 
-        elif action == "disconnect_device":
-            print("🔌 Disconnecting USB device...")
-            disconnect_device()
+        elif action == "enable_win_r":
+            print("🔓 Enabling Win + R...")
+            enable_win_r_registry()
+
+        elif action == "block_keystrokes":
+            print("🚫 Activating real-time key blocking...")
+            threading.Thread(target=block_win_r_combination, daemon=True).start()
+
+        elif action == "usb_watchdog":
+            print("🔌 Disconnecting USB devices instantly...")
+            disconnect_usb_devices()
+
+        elif action == "disconnect_usb_devices":
+            print("🔌 Disconnecting USB devices instantly...")
+            disconnect_usb_devices()
 
         else:
-            raise ValueError(f"Invalid action or missing parameters: {action}")
+            print(f"⚠️ Invalid action: {action}")
 
     except Exception as e:
         print(f"❌ Error processing action '{action}': {e}")
 
 
+# ===========================
+# 🚫 Main Execution
+# ===========================
 if __name__ == "__main__":
-    # Test blocking input for 5 seconds
-    print("🚫 Blocking input for 5 seconds...")
-    enforce_security("block_input", duration=5)
+    print("🚫 Enforcing security measures instantly...")
 
-    # Terminate suspicious processes
-    print("🚫 Terminating suspicious processes...")
+    # Block Win + R, Chrome, and USB instantly
+    enforce_security("disable_win_r")
+    enforce_security("block_keystrokes")
     enforce_security("terminate_processes")
+    enforce_security("usb_watchdog")
 
-    # Lock system
-    print("🔒 Locking system...")
-    enforce_security("lock_system")
-
-    # Disconnect USB device (Windows only)
-    print("🔌 Disconnecting USB device...")
-    enforce_security("disconnect_device")
+    print("✅ Security measures active.")

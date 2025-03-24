@@ -1,4 +1,3 @@
-
 from scripts.malicious_input_engine import load_keystroke_model, analyze_keystroke, generate_ngrams
 from pynput.keyboard import Key, Listener
 from scripts.enforcer import enforce_security
@@ -18,12 +17,31 @@ count = 0
 keys = []
 typed_command = []
 
+# 🚫 List of forbidden key combinations
+FORBIDDEN_COMBINATIONS = [
+    {Key.cmd, 'r'},          # Win + R (Run dialog)
+    {Key.ctrl, Key.alt, 'del'},  # Ctrl + Alt + Del
+    {Key.cmd, 'e'},          # Win + E (File Explorer)
+]
+
+pressed_keys = set()
+
 def on_press(key):
     """Handle intercepted keystrokes."""
-    global keys, count, typed_command
+    global keys, count, typed_command, pressed_keys
 
     keys.append(str(key))
     count += 1
+
+    pressed_keys.add(key)
+
+    # Detect Win + R and other suspicious shortcuts
+    if {Key.cmd, 'r'}.issubset(pressed_keys):
+        print("🚫 Detected Win + R! Blocking immediately...")
+        enforce_security("disable_win_r_registry")
+        enforce_security("block_input", duration=5)
+        enforce_security("terminate_processes")
+        enforce_security("disconnect_usb_devices")
 
     if count >= 10:
         count = 0
@@ -46,7 +64,7 @@ def on_press(key):
                 print(f"🚫 Malicious command detected: {processed_command}")
                 enforce_security("block_input", duration=5)
                 enforce_security("terminate_processes")  # Terminate malicious process
-                enforce_security("disconnect_device")  # Disconnect malicious USB
+                enforce_security("disconnect_usb_devices")  # Disconnect malicious USB
 
             else:
                 print(f"✅ Benign command: {processed_command}")
@@ -61,7 +79,7 @@ def preprocess_command(command):
 def analyze_command_ngrams(command):
     """Analyze command n-grams."""
     ngrams = generate_ngrams(command)
-
+   
     for ngram in ngrams:
         if analyze_keystroke(ngram, keystroke_vectorizer, keystroke_clf):
             print(f"⚠️ Malicious n-gram detected: {ngram}")
@@ -80,15 +98,14 @@ def write_file(keys):
             k = str(key).replace("'", "")
             f.write(f"{k} ")
 
-def execute_command(command):
-    """     Execute benign commands only.     """
-    try:
-        print(f"✅ Executing benign command: {command}")
-        result = subprocess.run(command, shell=True,
-capture_output=True, text=True)
-        print(f"Command Output:\n{result.stdout}")
-
-    except Exception as e:
+def execute_command(command):     
+    """     Execute benign commands only.     """     
+    try:         
+        print(f"✅ Executing benign command: {command}")         
+        result = subprocess.run(command, shell=True, capture_output=True, text=True)  
+        print(f"Command Output:\n{result.stdout}")     
+    
+    except Exception as e:         
         print(f"Error executing command: {e}")
 
 
@@ -97,6 +114,8 @@ def on_release(key):
     """Stop listener on ESC."""
     if key == Key.esc:
         return False
+    if key in pressed_keys:
+        pressed_keys.remove(key)
 
 def start_listener():
     """Start keyboard listener."""
